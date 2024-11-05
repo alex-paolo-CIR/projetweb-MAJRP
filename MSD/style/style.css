@@ -4,8 +4,7 @@ html, body {
     margin: 0; /* Enlève les marges par défaut */
 }
 
-.logo {
-    height: 512px;
+.logo{
     width: 512px;
     transition: transform 0.5s ease;
     cursor: pointer;
@@ -29,7 +28,6 @@ html, body {
     /* telephone */
 
     .logo {
-        height: 256px;
         width: 256px;
         transition: transform 0.5s ease;
         cursor: pointer;
@@ -40,7 +38,6 @@ html, body {
 @media only screen and (768px>=width){ 
     /* tablette */
     .logo {
-        height: 256px;
         width: 256px;
         transition: transform 0.5s ease;
         cursor: pointer;
