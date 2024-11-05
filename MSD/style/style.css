@@ -3,11 +3,23 @@ html, body {
     height: 100%; /* Assure que le corps occupe toute la hauteur de la fenêtre */
     margin: 0; /* Enlève les marges par défaut */
 }
+header {
+    width: 100%;
+}
+.fond{
+    background-image: image-set("../images/fondtest.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 900px; 
+}
 main{
     text-align: center;
     padding-top: 10%;
     color: white;
     font-size: 50px;
+}
+p{
+    font-size: 40px;
 }
 .logo{
     width: 512px;
@@ -55,15 +67,18 @@ main{
     }
 }
 
-
 /* Styles de la navbar */
 .navbar {
+position: fixed;
+top: 0;
+width: 100%;
 display: flex;
 align-items: center;
 justify-content: space-between;
-background-color: #ffd900;
+
 padding-left: 10px;
 padding-right: 10px;
+
 }
 
 /* Menu déroulant */
