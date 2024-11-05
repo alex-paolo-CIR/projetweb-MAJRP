@@ -4,9 +4,48 @@ html, body {
     margin: 0; /* Enlève les marges par défaut */
 }
 
+.logo {
+    height: 512px;
+    width: 512px;
+    width: 100%;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
 .logo-container {
     display: flex; /* Utilisation de Flexbox pour centrer le contenu */
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
     height: 100%; /* Prend toute la hauteur de la page */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+@media only screen and (600px>=width){ 
+    /* telephone */
+
+    .logo {
+        height: 256px;
+        width: 256px;
+        width: 100%;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+    
+}
+
+@media only screen and (768px>=width){ 
+    /* tablette */
+    .logo {
+        height: 256px;
+        width: 256px;
+        width: 100%;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
 }
