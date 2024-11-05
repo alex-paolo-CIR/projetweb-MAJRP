@@ -3,11 +3,20 @@ html, body {
     height: 100%; /* Assure que le corps occupe toute la hauteur de la fenêtre */
     margin: 0; /* Enlève les marges par défaut */
 }
-
+main{
+    text-align: center;
+    padding-top: 50%;
+    color: white;
+    font-size: 50px;
+}
 .logo{
     width: 512px;
     transition: transform 0.5s ease;
     cursor: pointer;
+}
+
+.lien{
+    transition: transform 3s ease;
 }
 
 .logo-container {
@@ -21,7 +30,9 @@ html, body {
     transform: scale(1.1);
 }
 
-
+.lien:active {
+    transform: scale(2);
+}
 
 
 @media only screen and (600px>=width){ 
@@ -42,4 +53,87 @@ html, body {
         transition: transform 0.5s ease;
         cursor: pointer;
     }
+}
+
+
+/* Styles de la navbar */
+.navbar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+background-color: #ffd900;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+/* Menu déroulant */
+.dropdown {
+position: relative;
+}
+
+.dropbtn {
+background-color: #ffffff;
+color: rgb(0, 0, 0);
+padding: 10px 15px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+border-radius: 10px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+left: 0;
+top: 100%;
+background-color: #ffd900;
+min-width: 150px;
+border-radius: 10px;
+border-style: solid;
+border-color: black;
+}
+
+.dropdown-content a {
+color: rgb(0, 0, 0);
+padding: 10px 15px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: #ffffff;
+border-radius: 10px;
+
+}
+
+/* Montrer le menu déroulant au survol */
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+/* Logo centré */
+.logo {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.logo img {
+width: 95px;
+}
+
+/* Bouton Se connecter */
+.login-btn {
+background-color: #ffffff;
+color: rgb(0, 0, 0);
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+border-radius: 10px;
+transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+background-color: #e0e0e0;
 }
