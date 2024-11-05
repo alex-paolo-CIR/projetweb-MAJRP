@@ -1,3 +1,12 @@
-html{
-    background-color: rgb(20, 20, 20);
+html, body {
+    background-color: rgb(20, 20, 20); /* Couleur du fond */
+    height: 100%; /* Assure que le corps occupe toute la hauteur de la fenêtre */
+    margin: 0; /* Enlève les marges par défaut */
+}
+
+.logo-container {
+    display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100%; /* Prend toute la hauteur de la page */
 }
