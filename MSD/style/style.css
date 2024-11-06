@@ -6,37 +6,32 @@ html, body {
 header {
     width: 100%;
 }
-.fond {
-    position: relative;
+
+.background {
+    background-image: url("../images/fondtest.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
-    overflow: hidden;
+    position: relative;
     z-index: 0;
-}
-.video-fond {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Assure que la vidéo couvre tout l'écran */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.video-background {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-.background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-  }
+.background img.logo {
+    transition: transform 0.3s ease;
+}
+
+.background img.logo:hover {
+    transform: scale(1.1);
+}
+
+
+
 .overlay {
     position:relative;
     z-index: 0;
@@ -89,9 +84,6 @@ p{
     position: relative;
 }
 
-.logo:hover {
-    transform: scale(1.1);
-}
 
 .lien:active {
     transform: scale(2);
