@@ -6,12 +6,16 @@ html, body {
 header {
     width: 100%;
 }
-.fond{
-    background-image: image-set("../images/fondtest.gif");
+.fond {
+    background-image: url("../images/fondtest.gif"); /* Ajoutez votre chemin d'image ici */
     background-repeat: no-repeat;
-    background-size: 100%;
-    height: 900px; 
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Assurez-vous que l'image de fond est derrière le contenu */
 }
+
 main{
     text-align: center;
     padding-top: 10%;
@@ -36,6 +40,8 @@ p{
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
     height: 100%; /* Prend toute la hauteur de la page */
+    z-index: 1; /* Place le logo au-dessus du fond */
+    position: relative; /* Permet d'utiliser le z-index */
 }
 
 .logo:hover {
@@ -78,6 +84,7 @@ justify-content: space-between;
 
 padding-left: 10px;
 padding-right: 10px;
+z-index: 1;
 
 }
 
