@@ -1,8 +1,14 @@
 html, body {
-    background-color: rgb(20, 20, 20); /* Couleur du fond */
-    height: 100%; /* Assure que le corps occupe toute la hauteur de la fenêtre */
-    margin: 0; /* Enlève les marges par défaut */
+    background-color: rgb(20, 20, 20);
+    height: 100%;
+    margin: 0;
+    background-image: url("../images/fondtest.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 header {
     width: 100%;
 }
@@ -16,7 +22,6 @@ header {
     width: 100%;
     position: relative;
     z-index: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,50 +35,47 @@ header {
     transform: scale(1.1);
 }
 
-
-
 .overlay {
-    position:relative;
+    position: relative;
     z-index: 0;
     text-align: center;
     color: white;
     font-size: 50px;
-
-    display: flex; /* Utilisation de Flexbox pour centrer le contenu */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    height: 100%; /* Prend toute la hauteur de la page */
-
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
-main{
+
+main {
     text-align: center;
     padding-top: 10%;
     color: white;
     font-size: 50px;
 }
-p{
+
+p {
     font-size: 40px;
 }
-.logo{
+
+.logo {
     width: 512px;
     transition: transform 0.5s ease;
     cursor: pointer;
 }
 
-.lien{
+.lien {
     transition: transform 3s ease;
 }
 
 .logo-container {
-    display: flex; /* Utilisation de Flexbox pour centrer le contenu */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
-    height: 100%; /* Prend toute la hauteur de la page */
-    z-index: 1; /* Place le logo au-dessus du fond */
-    position: relative; /* Permet d'utiliser le z-index */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 1;
+    position: relative;
 }
-
 
 .txt {
     font-size: 50px;
@@ -92,20 +94,7 @@ p{
     transform: scale(2);
 }
 
-
-@media only screen and (600px>=width){ 
-    /* telephone */
-
-    .logo {
-        width: 256px;
-        transition: transform 0.5s ease;
-        cursor: pointer;
-    }
-    
-}
-
-@media only screen and (768px>=width){ 
-    /* tablette */
+@media only screen and (max-width: 600px) {
     .logo {
         width: 256px;
         transition: transform 0.5s ease;
@@ -113,97 +102,100 @@ p{
     }
 }
 
-/* Styles de la navbar */
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 256px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+}
+
 .navbar {
-position: fixed;
-top: 0;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-
-padding-left: 10px;
-padding-right: 10px;
-z-index: 1;
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
 }
 
-/* Menu déroulant */
 .dropdown {
-position: relative;
+    position: relative;
+}
+
+#btnMenu {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: none;
 }
 
 .dropbtn {
-background-color: #ffffff;
-color: rgb(0, 0, 0);
-padding: 10px 15px;
-border: none;
-cursor: pointer;
-font-size: 16px;
-border-radius: 10px;
-transition: transform 0.5s ease;
+    background: none;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
 }
+
 .dropbtn:hover {
     transform: scale(1.1);
 }
 
-
 .dropdown-content {
-display: none;
-position: absolute;
-left: 0;
-top: 100%;
-background-color: #ffd900;
-min-width: 150px;
-border-radius: 10px;
-border-style: solid;
-border-color: black;
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #ffd900;
+    min-width: 150px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
 }
 
 .dropdown-content a {
-color: rgb(0, 0, 0);
-padding: 10px 15px;
-text-decoration: none;
-display: block;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
 }
 
 .dropdown-content a:hover {
-background-color: #ffffff;
-border-radius: 10px;
-
+    border-radius: 10px;
 }
 
-/* Montrer le menu déroulant au survol */
 .dropdown:hover .dropdown-content {
-display: block;
+    display: block;
 }
 
-/* Logo centré */
 .logo {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo img {
-width: 95px;
+    width: 95px;
 }
 
-/* Bouton Se connecter */
 .login-btn {
-background-color: #ffffff;
-right: 5%;
-color: rgb(0, 0, 0);
-padding: 10px 20px;
-border: none;
-cursor: pointer;
-font-size: 16px;
-border-radius: 10px;
-transition: background-color 0.3s;
-transition: transform 0.5s ease;
+    right: 5%;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.5s ease;
 }
 
 .login-btn:hover {
-background-color: #e0e0e0;
-transform: scale(1.5);
+    background-color: #e0e0e0;
+    transform: scale(1.5);
 }
