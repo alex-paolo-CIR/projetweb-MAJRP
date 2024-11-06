@@ -84,6 +84,9 @@ p{
     position: relative;
 }
 
+.logo:hover {
+    transform: scale(1.1);
+}
 
 .lien:active {
     transform: scale(2);
