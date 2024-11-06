@@ -102,7 +102,12 @@ border: none;
 cursor: pointer;
 font-size: 16px;
 border-radius: 10px;
+transition: transform 0.5s ease;
 }
+.dropbtn:hover {
+    transform: scale(1.1);
+}
+
 
 .dropdown-content {
 display: none;
@@ -148,6 +153,7 @@ width: 95px;
 /* Bouton Se connecter */
 .login-btn {
 background-color: #ffffff;
+right: 5%;
 color: rgb(0, 0, 0);
 padding: 10px 20px;
 border: none;
@@ -155,8 +161,10 @@ cursor: pointer;
 font-size: 16px;
 border-radius: 10px;
 transition: background-color 0.3s;
+transition: transform 0.5s ease;
 }
 
 .login-btn:hover {
 background-color: #e0e0e0;
+transform: scale(1.5);
 }
