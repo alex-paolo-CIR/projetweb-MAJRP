@@ -168,6 +168,7 @@ p {
 
 .dropdown-content a:hover {
     border-radius: 10px;
+    background-color: #bca000;
 }
 
 .dropdown:hover .dropdown-content {
