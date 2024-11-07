@@ -188,6 +188,7 @@ p {
 .login-btn {
     right: 5%;
     color: rgb(0, 0, 0);
+    background-color: #ffd900;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -197,6 +198,6 @@ p {
 }
 
 .login-btn:hover {
-    background-color: #e0e0e0;
-    transform: scale(1.5);
+    background-color: #bca000;
+    transform: scale(1.2);
 }
