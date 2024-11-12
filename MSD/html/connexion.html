@@ -55,34 +55,46 @@
                 </div>
             </nav>
         </header>
-        
-		<div class="conteneur">
+        <div class="background">
+		<div class="page-login">
 
-            <div class="fond">
+            
+
+
+            
                 
-            </div>
+                <div class="conteneur-login">
+                    <form action="">
+                        <h1>Se connecter</h1>
+                        <div class="input-box">
+                            <input type="text" placeholder="Nom d'utilisateur" required>
+                            <img id="user" src="../images/account.png">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Mot de passe" required>
+                            <img id="pwd" src="../images/account.png">
+                        </div>
+
+                        <button type="submit" class="btn">Se connecter</button>
+
+                        <div class="inscription">
+                            <p>Vous n'avez pas de compte ? <a href="#">S'inscrire</a></p>
+
+                        </div>
 
 
-            <main>
-                <h6 style="color: white; align-self: center;"> miaou se connecter</h6>
 
-                <form>
-                    <div class="champs"> 
-                        <input type="text" placeholder="Nom d'utilisateur" name="username" required>
-                        <input type="password" placeholder="Mot de passe" name="password" required>
-                        
-                    </div>
-                    <div class="btn-connexion" onclick="window.location.href='./shop.html'">
-                        <button href="shop.html"><a>Se connecter</a></button>
-                    </div>
+                    </form>
+                </div>
 
-                </form>
 
-            </main>
+
+
+            
 
             
             <footer></footer>
-
+        </div>
         </div>
 	</body>
 </html>

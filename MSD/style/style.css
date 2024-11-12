@@ -242,58 +242,87 @@ p {
     width: 30px;
 }
 
-form {
-    align-items: center;
-    display: inline-grid;
-    background-color: rgb(29, 29, 29);
-    padding: 80px;
-    border-radius: 20px;
-    padding-bottom: 50px;
-}
-.champs {
-    align-items: center;
-    display: inline-grid;
+/* connexion */
+.page-login {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
-
-}
-.champs input, .btn-connexion button {
-    width: 500px;
-    height: 50px;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 10px;
-    border-color: white;
-    background-color: rgb(20, 20, 20);
-    font-size: 40px;
-}
-
-.btn-connexion button {
-    width: 500px;
-    height: 50px;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 10px;
-    border-color: white;
-    background-color:#bca000;
-    font-size: 40px;
-}
-.btn-connexion {
     align-items: center;
-    display: inline-grid;
-    padding: 100px;
-    border-radius: 20px;
-
+}
+.conteneur-login {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.575);
+    backdrop-filter:  blur(5px);
+    border-radius: 10px;
+    padding: 30px 40px;
 }
 
-.btn-connexion a {
-    color: rgb(255, 255, 255);
+#pwd, #user {
+    width: 20px;
 }
 
-.champs input::placeholder{
-    color: white
+.conteneur-login h1 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
 }
 
+.conteneur-login .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 60px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 20px x 20px 20px;
 
+}
+.input-box input::placeholder {
+    color: white;
+    padding-left: 10px;
+}
+
+.input-box img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.conteneur-login .btn {
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.conteneur-login .inscription p{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
 
 /* PANIER BUTTON*/
 
