@@ -308,7 +308,7 @@ form {
     width: 200px;
     margin-left: auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(20, 20, 20);
     border: 0;
     border-left: 1px solid rgba(27, 31, 35, 0.15);
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
@@ -337,9 +337,9 @@ form {
     display: block;
     text-decoration: none;
     padding: 10px 0;
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 2px solid yellow;
     margin-bottom: 10px;
-    color: #2c3e50;
+    color: yellow;
     font-weight: bold;
     width: 100%;
     transition: width 0.3s ease, color 0.3s ease;
@@ -359,7 +359,6 @@ form {
     appearance: none;
     border: none;
     border-radius: 15px;
-
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
@@ -381,6 +380,7 @@ form {
     padding: 6px 16px;
     touch-action: manipulation;
     will-change: transform;
+    background-color: yellow;
   }
   
   .conteneur-connexion .button:hover {
