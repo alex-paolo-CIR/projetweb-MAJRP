@@ -228,3 +228,67 @@ p {
     height: auto;
     border-radius: 8px;
   }
+
+
+.conteneur-connexion {
+    padding-right: 30px;
+}
+
+#connexion {
+    width: 40px;
+}
+
+#cart {
+    width: 30px;
+}
+
+form {
+    align-items: center;
+    display: inline-grid;
+    background-color: rgb(29, 29, 29);
+    padding: 80px;
+    border-radius: 20px;
+    padding-bottom: 50px;
+}
+.champs {
+    align-items: center;
+    display: inline-grid;
+    justify-content: center;
+
+}
+.champs input, .btn-connexion button {
+    width: 500px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: white;
+    background-color: rgb(20, 20, 20);
+    font-size: 40px;
+}
+
+.btn-connexion button {
+    width: 500px;
+    height: 50px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: white;
+    background-color:#bca000;
+    font-size: 40px;
+}
+.btn-connexion {
+    align-items: center;
+    display: inline-grid;
+    padding: 100px;
+    border-radius: 20px;
+
+}
+
+.btn-connexion a {
+    color: rgb(255, 255, 255);
+}
+
+.champs input::placeholder{
+    color: white
+}
