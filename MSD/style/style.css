@@ -110,6 +110,7 @@ p {
     }
     .conteneur-login {
         width: 100%;
+    }
 }
 /* tablette */
 @media only screen and (max-width: 768px) {
