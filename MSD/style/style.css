@@ -101,15 +101,17 @@ p {
 .lien:active {
     transform: scale(2);
 }
-
+/* tel */
 @media only screen and (max-width: 600px) {
     .logo {
         width: 256px;
         transition: transform 0.5s ease;
         cursor: pointer;
     }
+    .conteneur-login {
+        width: 100%;
 }
-
+/* tablette */
 @media only screen and (max-width: 768px) {
     .logo {
         width: 256px;
