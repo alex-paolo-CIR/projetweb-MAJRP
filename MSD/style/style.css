@@ -343,8 +343,10 @@ p {
   }
   
   .conteneur-connexion #mobile-navigation {
+    top: 0;
+    right: 0;
     height: 100vh;
-    width: 200px;
+    width: 40vw;
     margin-left: auto;
     padding: 20px;
     background-color: rgb(20, 20, 20);
@@ -352,7 +354,7 @@ p {
     border-left: 1px solid rgba(27, 31, 35, 0.15);
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
     transition-behavior: allow-discrete;
-    display: block;
+    /* display: block; */
     /*POPOVER EN ETAT FERMÉ*/
     opacity: 0;
     transform: translateX(200px);
@@ -365,10 +367,10 @@ p {
   }
   
   .conteneur-connexion ul {
-    margin-top: 200px;
+    margin-top: 100px;
   }
   .conteneur-connexion ul li:last-child {
-    margin-top: 100%;
+    margin-top: 100pxwgit;
   }
   
   
@@ -422,6 +424,12 @@ p {
   }
   
   .conteneur-connexion .close-button {
+    padding: 6px 16px;
+    touch-action: manipulation;
+    will-change: transform;
+    background-color: yellow;
+  }
+  .conteneur-connexion .close-button:hover {
     padding: 6px 16px;
     touch-action: manipulation;
     will-change: transform;
