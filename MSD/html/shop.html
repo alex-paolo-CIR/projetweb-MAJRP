@@ -40,18 +40,94 @@
 
 
             <main>
-                MSD à la prod shop
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper tortor at accumsan convallis. Vivamus lacinia felis sed turpis porttitor placerat. Praesent molestie velit sit amet vulputate ultricies. Etiam ut sem diam. Maecenas semper arcu in diam egestas, sit amet finibus ligula sagittis. Maecenas sed dignissim leo. Sed auctor, ex vel maximus elementum, odio lorem tempus sapien, ut porttitor elit nunc ac orci. Nulla porta volutpat dignissim. Duis quis mauris eu neque feugiat iaculis. Maecenas nisl tortor, elementum id elementum a, malesuada et ex. Praesent purus dolor, finibus id magna non, blandit euismod leo. In eu quam sit amet turpis vestibulum pharetra vehicula non augue. Donec fringilla porta porta. Fusce condimentum sem ut orci rutrum tempor. Suspendisse potenti.
-
-                    Donec tincidunt lobortis nulla, in sollicitudin ipsum lobortis a. Ut sollicitudin iaculis tempor. Duis iaculis sem at turpis blandit volutpat. Nam euismod pretium neque. Fusce at nisi congue, laoreet diam ut, scelerisque mi. Vivamus blandit velit blandit enim efficitur, eu elementum nisi varius. Vestibulum diam eros, vulputate eu ex nec, imperdiet congue mi. Maecenas leo orci, dapibus non consequat condimentum, pulvinar sit amet sem.
-                    
-                    Donec posuere quam finibus ipsum commodo, id aliquet diam accumsan. Sed vel metus vitae augue pharetra luctus. Aenean id egestas risus, eu pharetra neque. Maecenas fermentum ultrices imperdiet. Aenean lacinia arcu ut lobortis feugiat. Suspendisse id orci eleifend risus volutpat iaculis. Donec finibus, quam convallis convallis bibendum, justo erat accumsan nisi, in suscipit erat lectus et sem. Pellentesque tincidunt dictum lectus id dignissim. Suspendisse interdum rhoncus dolor eget vehicula.
-                    
-                    Fusce accumsan neque id lectus viverra faucibus. Maecenas sit amet venenatis purus. Fusce laoreet, mauris in scelerisque convallis, risus nunc blandit quam, eu ullamcorper tortor leo vitae libero. Curabitur faucibus nec odio id fermentum. Proin efficitur lacus mauris, nec pulvinar dui eleifend sed. Vivamus non pulvinar tellus. Praesent efficitur turpis eu malesuada maximus. Proin vitae enim vel erat imperdiet iaculis. Sed eu sollicitudin nulla, sit amet auctor ipsum. Morbi pretium mi arcu, eget accumsan mauris fermentum vel. Sed et velit quis tortor ultrices pulvinar sed ut orci.
-                    
-                    Sed fringilla congue consectetur. Maecenas fermentum massa lectus, sit amet finibus nisl ultrices lacinia. Sed iaculis lacus vel lacus hendrerit ullamcorper. Mauris nunc metus, iaculis a accumsan nec, consectetur quis augue. Nunc vehicula porta sapien eget viverra. Nullam eu hendrerit magna. Donec efficitur massa massa, sed egestas felis malesuada a. Curabitur vel bibendum lectus, at accumsan velit. Praesent pellentesque viverra consequat. Fusce sit amet augue nec ligula luctus aliquet vel aliquam lacus. Mauris a eros aliquet, porttitor tortor eget, gravida enim.</p>
+                MSD  - Boutique
             </main>
 
+            <section class="shop">
+                <div class="row">
+                    <div class="item">
+                        <img src="../images/vinyl1.png" alt="Vinyl 1">
+                        <p>ROCKSTAR</p>
+                    </div>
+                    <div class="item">
+                        <img src="../images/vinyl2.jpg" alt="Vinyl 2">
+                        <p>Vinyl 2</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <img src="../images/tshirt1.jpg" alt="T-shirt 1">
+                        <p>T-shirt 1</p>
+                    </div>
+                    <div class="item">
+                        <img src="../images/tshirt2.jpg" alt="T-shirt 2">
+                        <p>T-shirt 2</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <img src="../images/pull1.jpg" alt="Pull 1">
+                        <p>Pull 1</p>
+                    </div>
+                    <div class="item">
+                        <img src="../images/pull2.jpg" alt="Pull 2">
+                        <p>Pull 2</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <img src="../images/poster1.jpg" alt="Poster 1">
+                        <p>Poster 1</p>
+                    </div>
+                    <div class="item">
+                        <img src="../images/poster2.jpg" alt="Poster 2">
+                        <p>Poster 2</p>
+                    </div>
+                </div>
+            </section>
+            <!-- CSS pour la boutique -->
+            <style>
+                .shop {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 20px;
+                }
+
+                .row {
+                    display: flex;
+                    justify-content: space-around;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+
+                .item {
+                    flex: 1;
+                    margin: 10px;
+                    text-align: center;
+                }
+
+                .item img {
+                    width: 100%;
+                    max-width: 300px;
+                    height: auto;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    padding: 5px;
+                }
+
+                .item p {
+                    margin-top: 10px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #fff
+                }
+
+                .item:hover {
+                    transform: scale(1.1);
+                    transition: transform 0.5s;
+                }
+            </style>
             
             <footer></footer>
 
