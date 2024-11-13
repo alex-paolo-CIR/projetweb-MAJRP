@@ -7,7 +7,7 @@
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
     <style>
-        body {
+        html, body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -139,6 +139,7 @@
     </style>
 </head>
 <body>
+    
 
 <nav class="navbar">
     <div class="dropdown">
@@ -156,12 +157,30 @@
     </div>
     
     <div class="conteneur-connexion">
-        <a href="connexion.html">
-            <img id="connexion" src="../images/account.png" alt="Connexion">
-        </a>
-        <button class="button">
-            <img id="cart" src="../images/cart.png" alt="Panier">
-        </button>
+                        
+                        
+                          
+        <div>
+             <a href="connexion.html">
+                <img id="connexion" src="../images/account.png"></a>
+            <button popovertarget="mobile-navigation" popovertargetaction="show" class="button" >
+                <img id="cart" src="../images/cart.png">
+            </button >
+          
+            <nav popover id="mobile-navigation" >
+                
+              <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">×</button>
+              <span class="panier-label">PANIER</span>
+
+              <ul>
+                <li><a href="#">ARTICLE 1</a></li>
+                <li><a href="#">ARTICLE 2</a></li>
+                <li><a href="#">ARTICLE 3</a></li>
+                <li><a href="#" class="payment">PROCEDER AU PAIEMENT DE  247.95€</a></li>
+              </ul>
+            </nav>
+           
+        </div>
     </div>
 </nav>
 
