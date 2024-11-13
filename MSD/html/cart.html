@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head> 
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>MSD</title> 
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href ="../style/style.css">
+        
+	</head>
+		
+	<body>
+
+        <header>
+            <nav class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn"><img id="btnMenu" src="../images/menu.png" alt=""></button>
+                    <div class="dropdown-content">
+                        <a href="page.html">Accueil</a>
+                        <a href="shop.html">Boutique</a>
+                        <a href="plateforme.html">Platforme</a>
+                        <a href="renseignement.html">Renseignement</a>
+                    </div>
+                </div>
+
+                <a href="page.html">
+                <div class="logo">
+                <img src="../images/logo_msd.png" alt="Logo" />
+                </div></a>
+
+                <div class="conteneur-connexion">
+                    <a href="cart.html">
+                        <img id="cart" src="../images/cart.png">
+                    </a>
+                    <a href="connexion.html">
+                        <img id="connexion" src="../images/account.png">
+                    </a>
+                </div>
+            </nav>
+        </header>
+        
+		<div class="conteneur">
+
+            <div class="fond">
+                
+            </div>
+
+
+            <main>
+                <h6 style="color: white; align-self: center;">
+                <cart-drawer id="cart-drawer" class="cart-drawer drawer drawer--center-body color-scheme color-scheme--scheme-1" initial-focus="false" handle-editor-events="" role="dialog" aria-modal="true" open="" style="display: block;">
+                    <p class="h4" slot="header">Panier</p><p class="h5 text-center">Votre panier est vide</p></cart-drawer></h6>
+            </main>
+
+            
+            <footer></footer>
+
+        </div>
+	</body>
+</html>

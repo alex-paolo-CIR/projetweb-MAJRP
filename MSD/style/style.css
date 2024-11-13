@@ -9,7 +9,7 @@ header {
 }
 
 .background {
-    background-image: url("../images/backH.gif");
+    background-image: url("../images/miaou.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -227,4 +227,214 @@ p {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
+  }
+
+
+.conteneur-connexion {
+    padding-right: 30px;
+}
+
+#connexion {
+    width: 40px;
+}
+
+#cart {
+    width: 30px;
+}
+
+/* connexion */
+.page-login {
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteneur-login {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.575);
+    backdrop-filter:  blur(5px);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.300);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+#pwd, #user {
+    width: 20px;
+}
+
+.conteneur-login h1 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+}
+
+.conteneur-login .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 60px 0;
+}
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    /* padding: 10px 10px 10px 10px; */
+
+}
+.input-box input::placeholder {
+    color: white;
+    margin: 10px 10px 10px 10px;
+}
+
+.input-box img {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.conteneur-login .btn {
+    width: 100%;
+    height: 45px;
+    background-color: rgb(255, 238, 0);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); */
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.conteneur-login .inscription p{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.conteneur-login .inscription p a{
+    font-size:16px;
+    text-align: center;
+    color: white;
+    
+}
+
+
+/* PANIER BUTTON*/
+
+.conteneur-connexion * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .conteneur-connexion #mobile-navigation {
+    height: 100vh;
+    width: 200px;
+    margin-left: auto;
+    padding: 20px;
+    background-color: rgb(20, 20, 20);
+    border: 0;
+    border-left: 1px solid rgba(27, 31, 35, 0.15);
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+    transition-behavior: allow-discrete;
+    display: block;
+    /*POPOVER EN ETAT FERMÉ*/
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  
+  /*POPOVER EN ETAT OUVERT*/
+  .conteneur-connexion #mobile-navigation:popover-open {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  
+  .conteneur-connexion ul {
+    margin-top: 200px;
+  }
+  .conteneur-connexion ul li:last-child {
+    margin-top: 100%;
+  }
+  
+  
+  
+  .conteneur-connexion li {
+    list-style-type: none;
+  }
+  
+  .conteneur-connexion li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    transition: width 0.3s ease, color 0.3s ease;
+  }
+  
+  .conteneur-connexion li a:hover {
+    width: 90%;
+    color: yellow;
+    border-bottom: 2px solid yellow;
+  }
+  
+  /* caca */
+  
+  /* BUTTONS STYLE */
+  .conteneur-connexion .button {
+    flex-shrink: 0;
+    background-color: black;
+    appearance: none;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    outline: none;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    margin-left: auto;
+  }
+  
+  .conteneur-connexion .close-button {
+    padding: 6px 16px;
+    touch-action: manipulation;
+    will-change: transform;
+    background-color: yellow;
+  }
+  
+  .conteneur-connexion .button:hover {
+
+    
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .conteneur-connexion .button:active {
+    box-shadow: none;
+    transform: translateY(0);
   }

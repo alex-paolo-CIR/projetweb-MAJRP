@@ -28,26 +28,73 @@
                 <img src="../images/logo_msd.png" alt="Logo" />
                 </div></a>
 
-                <a href="connexion.html">
-                    <button class="login-btn">Se connecter</button>
-                </a>
+                <div class="conteneur-connexion">
+                        
+                        
+                          
+                    <div>
+                        <a href="connexion.html">
+                            <img id="connexion" src="../images/account.png"></a>
+
+                        <button popovertarget="mobile-navigation" popovertargetaction="show" class="button" >
+                            <img id="cart" src="../images/cart.png">
+                        </button >
+                      
+                        <nav popover id="mobile-navigation">
+                          <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">Close</button>
+                          <ul>
+                            <li><a href="#">ARTICLE 1</a></li>
+                            <li><a href="#">ARTICLE 2</a></li>
+                            <li><a href="#">ARTICLE 3</a></li>
+                            <li><a href="#">PROCEDER AU PAIEMENT</a></li>
+                          </ul>
+                        </nav>
+                       
+                    </div>
+                
+                </div>
             </nav>
         </header>
-        
-		<div class="conteneur">
+        <div class="background">
+		<div class="page-login">
 
-            <div class="fond">
+            
+
+
+            
                 
-            </div>
+                <div class="conteneur-login">
+                    <form action="">
+                        <h1>Connexion</h1>
+                        <div class="input-box">
+                            <input type="text" placeholder="Nom d'utilisateur" required>
+                            <img id="user" src="../images/account.png">
+                        </div>
+                        <div class="input-box">
+                            <input type="password" placeholder="Mot de passe" required>
+                            <img id="pwd" src="../images/mdp.png">
+                        </div>
+
+                        <button type="submit" class="btn">Se connecter</button>
+
+                        <div class="inscription">
+                            <p>Vous n'avez pas de compte ? <a href="#">S'inscrire</a></p>
+
+                        </div>
 
 
-            <main>
-                
-            </main>
+
+                    </form>
+                </div>
+
+
+
+
+            
 
             
             <footer></footer>
-
+        </div>
         </div>
 	</body>
 </html>
