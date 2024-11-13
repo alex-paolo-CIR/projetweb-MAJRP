@@ -370,7 +370,7 @@ p {
     margin-top: 100px;
   }
   .conteneur-connexion ul li:last-child {
-    margin-top: 100pxwgit;
+    margin-top: 150px;
   }
   
   
@@ -424,16 +424,18 @@ p {
   }
   
   .conteneur-connexion .close-button {
-    padding: 6px 16px;
+    float: right;
+    padding: 6px 100px;
     touch-action: manipulation;
     will-change: transform;
     background-color: yellow;
   }
   .conteneur-connexion .close-button:hover {
-    padding: 6px 16px;
+    float:right;
+    padding: 8px 110px;
     touch-action: manipulation;
     will-change: transform;
-    background-color: yellow;
+    background-color: rgb(95, 95, 3);
   }
   
   .conteneur-connexion .button:hover {
