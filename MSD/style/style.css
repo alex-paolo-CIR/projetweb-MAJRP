@@ -396,8 +396,7 @@ p {
     color: yellow;
     border-bottom: 2px solid yellow;
   }
-  
-  /* caca */
+
   
   /* BUTTONS STYLE */
   .conteneur-connexion .button {
@@ -422,25 +421,39 @@ p {
     will-change: transform;
     margin-left: auto;
   }
+
+  .conteneur-connexion .panier-label {
+    font-size: 40px;
+    font-weight: bold;
+    color: yellow;
+    display:block;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 2px solid yellow;
+    margin-bottom: 10px;
+    width: 100%;
+}
   
   .conteneur-connexion .close-button {
     float: right;
-    padding: 6px 100px;
+    padding: 12px 18px;
+    font-size: 32px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
     touch-action: manipulation;
     will-change: transform;
-    background-color: yellow;
+    background-color: rgb(20, 20, 20);
   }
   .conteneur-connexion .close-button:hover {
-    float:right;
-    padding: 8px 110px;
     touch-action: manipulation;
     will-change: transform;
-    background-color: rgb(95, 95, 3);
+    background-color: rgb(40, 40, 40);
   }
   
   .conteneur-connexion .button:hover {
-
-    
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
