@@ -1,166 +1,251 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head> 
-        <meta name="viewport" content="width=device.width, initial-scale=1.0">
-		<meta charset="utf-8">
-		<title>MSD</title> 
-		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-		<link rel="stylesheet" type="text/css" href ="../style/style.css">
-	</head>
-		
-	<body>
-
-        <header>
-            <nav class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn"><img id="btnMenu" src="../images/menu.png" alt=""></button>
-                    <div class="dropdown-content">
-                        <a href="page.html">Accueil</a>
-                        <a href="shop.html">Boutique</a>
-                        <a href="plateforme.html">Platforme</a>
-                        <a href="renseignement.html">Renseignement</a>
-                    </div>
-                </div>
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>MSD - Boutique</title> 
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('../images/fondtest.gif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
         
-                <div class="logo">
-                <img src="../images/logo_msd.png" alt="Logo" />
-                </div>
-                
-                <div class="conteneur-connexion">
-                        
-                        
-                          
-                    <div>
-                         <a href="connexion.html">
-                            <img id="connexion" src="../images/account.png"></a>
-                        <button popovertarget="mobile-navigation" popovertargetaction="show" class="button" >
-                            <img id="cart" src="../images/cart.png">
-                        </button >
-                      
-                        <nav popover id="mobile-navigation" >
-                            
-                          <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">×</button>
-                          <span class="panier-label">PANIER</span>
+        header {
+            padding: 10px;
+        }
 
-                          <ul>
-                            <li><a href="#">ARTICLE 1</a></li>
-                            <li><a href="#">ARTICLE 2</a></li>
-                            <li><a href="#">ARTICLE 3</a></li>
-                            <li><a href="#" class="payment">PROCEDER AU PAIEMENT DE  247.95€</a></li>
-                          </ul>
-                        </nav>
-                       
-                    </div>
-                </div>
-            </div>
-            </nav>
-        </header>
-        
-		<div class="conteneur-shop">
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
 
-            <div class="glitch">
-                
-            
+        .logo img {
+            max-width: 100px;
+        }
 
+        .conteneur-shop {
+            max-width: 800px;
+            margin: 50px auto;
+            margin-top: 10%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-            <main>
-                <div>
-                MSD  - Boutique
-                <section class="shop">
-                    <div class="row">
-                        <div class="item">
-                            <img src="../merch/vinyl1.png" alt="Vinyl 1">
-                            <p>ROCKSTAR</p>
-                        </div>
-                        <div class="item">
-                            <img src="../merch/vinyl1h.png" alt="Vinyl 2">
-                            <p>Vinyl 2</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="item">
-                            <img src="../merch/Teeshirt_noir_devant.png" alt="T-shirt 1">
-                            <p>T-shirt 1</p>
-                        </div>
-                        <div class="item">
-                            <img src="../merch/Teeshirt_b_devant.png" alt="T-shirt 2">
-                            <p>T-shirt 2</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="item">
-                            <img src="../merch/Pull_noir_devant.png" alt="Pull 1">
-                            <p>Pull 1</p>
-                        </div>
-                        <div class="item">
-                            <img src="../merch/Pull_noir_devant.png" alt="Pull 2">
-                            <p>Pull 2</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="item">
-                            <img src="../merch/poster1.jpg" alt="Poster 1">
-                            <p>Poster 1</p>
-                        </div>
-                        <div class="item">
-                            <img src="../merch/poster2.jpg" alt="Poster 2">
-                            <p>Poster 2</p>
-                        </div>
-                    </div>
-                
-                </section>
-                
-            </main>
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
 
-            
-            <!-- CSS pour la boutique -->
-            <style>
-                .shop {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    margin: 20px;
-                    position: relative;
-                }
+        .shop-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 0 10px;
+        }
 
-                .row {
-                    display: flex;
-                    justify-content: space-around;
-                    width: 100%;
-                    margin-bottom: 20px;
-                    
-                }
+        .item {
+            text-align: center;
+            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
 
-                .item {
-                    flex: 1;
-                    margin: 10px;
-                    text-align: center;
-                }
+        .item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-                .item img {
-                    width: 100%;
-                    max-width: 300px;
-                    height: auto;
-                    border: 1px solid #ddd;
-                    border-radius: 4px;
-                    padding: 5px;
-                }
+        .item p {
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
 
-                .item p {
-                    margin-top: 10px;
-                    font-size: 18px;
-                    font-weight: bold;
-                    color: #fff
-                }
+        .item a {
+            text-decoration: none;
+            color: #fff;
+        }
 
-                .item:hover {
-                    transform: scale(1.1);
-                    transition: transform 0.5s;
-                }
-            </style>
-            
-            <footer></footer>
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .modal:target {
+            display: flex;
+        }
+
+        .close {
+            display:flex;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;           
+
+        }
+
+        .close a {
+            color: #fd0000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .shop-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn"><img id="btnMenu" src="../images/menu.png" alt="Menu"></button>
+        <div class="dropdown-content">
+            <a href="page.html">Accueil</a>
+            <a href="shop.html">Boutique</a>
+            <a href="plateforme.html">Plateforme</a>
+            <a href="renseignement.html">Renseignement</a>
         </div>
-        
-	</body>
+    </div>
+    
+    <div class="logo">
+        <img src="../images/logo_msd.png" alt="Logo">
+    </div>
+    
+    <div class="conteneur-connexion">
+        <a href="connexion.html">
+            <img id="connexion" src="../images/account.png" alt="Connexion">
+        </a>
+        <button class="button">
+            <img id="cart" src="../images/cart.png" alt="Panier">
+        </button>
+    </div>
+</nav>
+
+<div class="conteneur-shop">
+    <div class="shop-grid">
+        <div class="item">
+            <a href="#modal1">
+                <img src="../merch/vinyl1.png" alt="Vinyl 1">
+                <p>ROCKSTAR</p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#modal2">
+                <img src="../merch/vinyl1.png" alt="Vinyl 2">
+                <p>Vinyl 2</p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#modal3">
+                <img src="../merch/Teeshirt_noir_devant.png" alt="T-shirt 1">
+                <p>T-shirt 1</p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#modal4">
+            <img src="../merch/Teeshirt_b_devant.png" alt="T-shirt 2">
+            <p>T-shirt 2</p>
+            </a>
+        </div>
+        <div class="item">
+            <img src="../merch/Pull_noir_devant.png" alt="Pull 1">
+            <p>Pull 1</p>
+        </div>
+        <div class="item">
+            <img src="../merch/Pull_noir_devant.png" alt="Pull 2">
+            <p>Pull 2</p>
+        </div>
+        <div class="item">
+            <img src="../merch/poster1.jpg" alt="Poster 1">
+            <p>Poster 1</p>
+        </div>
+        <div class="item">
+            <img src="../merch/poster2.jpg" alt="Poster 2">
+            <p>Poster 2</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modales -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close"><a href="#">X</a></span>
+        <h2>ROCKSTAR</h2>
+        <p>prout prout prout</p>
+    </div>
+</div>
+
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close"><a href="#">X</a></span>
+        <h2>Vinyl 2</h2>
+        <p>prout prout prout</p>
+    </div>
+</div>
+
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close"><a href="#">X</a></span>
+        <h2>T-shirt 1</h2>
+        <p>prout prout prout</p>
+    </div>
+</div>
+
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close"><a href="#">X</a></span>
+        <h2>T-shirt 2</h2>
+        <p>prout prout prout</p>
+
+    </div>
+</div>
+
+
+
+</body>
 </html>
