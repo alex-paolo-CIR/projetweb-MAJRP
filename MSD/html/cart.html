@@ -11,32 +11,50 @@
 		
 	<body>
 
-        <header>
-            <nav class="navbar">
-                <div class="dropdown">
-                    <button class="dropbtn"><img id="btnMenu" src="../images/icon-menu.png" alt=""></button>
-                    <div class="dropdown-content">
-                        <a href="page.html">Accueil</a>
-                        <a href="shop.html">Boutique</a>
-                        <a href="plateforme.html">Platforme</a>
-                        <a href="renseignement.html">Renseignement</a>
+        <header>    
+            <div class="background"></div>
+                <nav class="navbar">
+                    <div class="dropdown">
+                        <button class="dropbtn"><img id="btnMenu" src="../images/icon-menu.png" alt=""></button>
+                        <div class="dropdown-content">
+                            <a href="page.html">Accueil</a>
+                            <a href="shop.html">Boutique</a>
+                            <a href="plateforme.html">Platforme</a>
+                            <a href="renseignement.html">Renseignement</a>
+                        </div>
                     </div>
-                </div>
+            
+                    <div class="logo">
+                        <a href="../index.html" ><img src="../images/logo_msd.png" alt="Logo" /></a>
+                    
+                    </div>
+                    
+                    <div class="conteneur-connexion">
+                        
+                        <a href="connexion.html"><img id="connexion" src="../images/icon-account.png"></a>
+                        
+                        <button popovertarget="mobile-navigation" popovertargetaction="show" class="button" >
+                            <img id="cart" src="../images/icon-cart.png">
+                        </button >
+                    
+                        <nav popover id="mobile-navigation">
+                        
+                            <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">×</button>
+                            <span class="panier-label">PANIER</span>
 
-                <a href="page.html">
-                <div class="logo">
-                <img src="../images/logo_msd.png" alt="Logo" />
-                </div></a>
-
-                <div class="conteneur-connexion">
-                    <a href="cart.html">
-                        <img id="cart" src="../images/icon-cart.png">
-                    </a>
-                    <a href="connexion.html">
-                        <img id="connexion" src="../images/icon-account.png">
-                    </a>
-                </div>
-            </nav>
+                            <ul>
+                                <li><a href="#">ARTICLE 1</a></li>
+                                <li><a href="#">ARTICLE 2</a></li>
+                                <li><a href="#">ARTICLE 3</a></li>
+                                <li><a href="#" class="payment">PROCEDER AU PAIEMENT DE  247.95€</a></li>
+                            </ul>
+                        </nav>
+                    
+                        
+                        
+                    </div>
+                </nav>
+            </div>    
         </header>
         
 		<div class="conteneur">
