@@ -114,12 +114,24 @@
         }
 
         .close {
-            display:flex;
-            top: 10px;
-            right: 10px;
-            font-size: 20px;
-            cursor: pointer;           
+            float: right;
+        padding: 4px 12px;
+        font-size: 32px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+        touch-action: manipulation;
+        will-change: transform;
+        background-color: #ffffff;
+        }
 
+        
+        .close:hover  {
+            touch-action: manipulation;
+            will-change: transform;
+            background-color: rgb(206, 206, 206);
         }
 
         .close a {
@@ -233,7 +245,7 @@
 <!-- Modales -->
 <div id="modal1" class="modal">
     <div class="modal-content">
-        <span class="close"><a href="#">X</a></span>
+        <span class="close"><a href="#">×</a></span>
         <h2>ROCKSTAR</h2>
         <p>prout prout prout</p>
     </div>
@@ -241,7 +253,7 @@
 
 <div id="modal2" class="modal">
     <div class="modal-content">
-        <span class="close"><a href="#">X</a></span>
+        <span class="close"><a href="#">×</a></span>
         <h2>Vinyl 2</h2>
         <p>prout prout prout</p>
     </div>
@@ -249,7 +261,7 @@
 
 <div id="modal3" class="modal">
     <div class="modal-content">
-        <span class="close"><a href="#">X</a></span>
+        <span class="close"><a href="#">×</a></span>
         <h2>T-shirt 1</h2>
         <p>prout prout prout</p>
     </div>
@@ -257,7 +269,7 @@
 
 <div id="modal4" class="modal">
     <div class="modal-content">
-        <span class="close"><a href="#">X</a></span>
+        <span class="close"><a href="#">×</a></span>
         <h2>T-shirt 2</h2>
         <p>prout prout prout</p>
 
