@@ -9,8 +9,8 @@ header {
     width: 100%;
 }
 
-.background {
-    background-image: url("../images/bg.gif");
+/* .background {
+    background-image: url("../images/fond.webm");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,6 +21,52 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+.video-fond {
+
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Assurez-vous que l'image de fond est derrière le contenu */
+    object-fit: cover; /* Assure que la vidéo couvre tout l'écran */
+}
+.video-background {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+.overlay {
+    position:relative;
+    z-index: 0;
+
+
+    display: flex; /* Utilisation de Flexbox pour centrer le contenu */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100%; /* Prend toute la hauteur de la page */
+
+    
 }
 
 .glitch {
