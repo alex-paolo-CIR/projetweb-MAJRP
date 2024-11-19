@@ -109,7 +109,7 @@ p {
         cursor: pointer;
     }
     .conteneur-login {
-        width: 100%;
+        width: 80vh;
     }
 }
 /* tablette */
@@ -285,7 +285,7 @@ p {
     align-items: center;
 }
 .conteneur-login {
-    width: 420px;
+    width: 35vh;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.575);
     backdrop-filter:  blur(5px);
