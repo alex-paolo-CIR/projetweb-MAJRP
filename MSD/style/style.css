@@ -409,6 +409,182 @@ p {
     
 }
 
+/* CART */
+
+/* connexion */
+.page-commande {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.conteneur-commande {
+    display: flex;
+    flex-direction: column; /* Positionnement vertical */
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 65vh;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.575);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titre-commande {
+    text-align: center;
+    margin-bottom: 30px; /* Espacement avec les cercles */
+    color: white;
+}
+
+.titre-commande h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.etapes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Les cercles occupent toute la largeur */
+}
+
+.etape {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.etape:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: 100%;
+    height: 4px;
+    background-color: #ddd;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.etape.active:not(:last-child)::after {
+    transform: translateY(-35px); /* Décalage vertical */
+    background-color: rgb(255, 238, 0);
+    height: 10px;
+}
+
+.cercle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #383838;
+    color: #000;
+    line-height: 50px;
+    margin: 0 auto 10px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+}
+
+.etape.active .cercle {
+    background-color: rgb(255, 238, 0);
+}
+
+.description {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 5px 0;
+    color: white;
+}
+
+.date {
+    font-size: 12px;
+    color: #555;
+}
+
+
+/* #pwd, #user {
+    width: 20px;
+}
+
+.conteneur-commande h1 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
+}
+
+.conteneur-commande .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 60px 0;
+}
+.input-box input {
+    width: 96%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: white;
+    padding: 0 0 0 10px;
+
+}
+.input-box input::placeholder {
+    color: white;
+    margin: 10px 10px 10px 10px;
+}
+
+.input-box img {
+    position: absolute;
+    right: 20px;
+    top: 55%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.conteneur-commande .btn {
+    width: 100%;
+    height: 45px;
+    background-color: rgb(255, 238, 0);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+.conteneur-commande .inscription p{
+    font-size: 15px;
+    text-align: center;
+    color: white;
+}
+
+.conteneur-commande .inscription p a{
+    font-size:16px;
+    text-align: center;
+    color: white;
+    
+}
+*/
 
 /* PANIER BUTTON*/
 

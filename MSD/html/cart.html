@@ -12,7 +12,7 @@
 	<body>
 
         <header>    
-            <div class="background"></div>
+
                 <nav class="navbar">
                     <div class="dropdown">
                         <button class="dropbtn"><img id="btnMenu" src="../images/icon-menu.png" alt=""></button>
@@ -31,48 +31,63 @@
                     
                     <div class="conteneur-connexion">
                         
-                        <a href="connexion.html"><img id="connexion" src="../images/icon-account.png"></a>
+                        <a href="connexion.html"><img id="connexion" src="../images/sillycat.jpg"></a>
                         
-                        <button popovertarget="mobile-navigation" popovertargetaction="show" class="button" >
-                            <img id="cart" src="../images/icon-cart.png">
-                        </button >
-                    
-                        <nav popover id="mobile-navigation">
                         
-                            <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">×</button>
-                            <span class="panier-label">PANIER</span>
-
-                            <ul>
-                                <li><a href="#">ARTICLE 1</a></li>
-                                <li><a href="#">ARTICLE 2</a></li>
-                                <li><a href="#">ARTICLE 3</a></li>
-                                <li><a href="#" class="payment">PROCEDER AU PAIEMENT DE  247.95€</a></li>
-                            </ul>
                         </nav>
                     
                         
                         
                     </div>
                 </nav>
-            </div>    
+   
         </header>
-        
-		<div class="conteneur">
-
-            <div class="fond">
-                
-            </div>
-
-
-            <main>
-                <h6 style="color: white; align-self: center;">
-                <cart-drawer id="cart-drawer" class="cart-drawer drawer drawer--center-body color-scheme color-scheme--scheme-1" initial-focus="false" handle-editor-events="" role="dialog" aria-modal="true" open="" style="display: block;">
-                    <p class="h4" slot="header">Panier</p><p class="h5 text-center">Votre panier est vide</p></cart-drawer></h6>
-            </main>
+		<div class="page-commande">
 
             
-            <footer></footer>
 
+            <section class="video-background">
+                <video autoplay loop muted playsinline class="background-video">
+                    <source src="../images/fond.webm" type="video/webm">
+                    Votre navigateur ne supporte pas les vidéos HTML5.
+                </video>
+                <div class="overlay">
+            
+                
+                    <div class="conteneur-commande">
+                        <div class="titre-commande">
+                            <h1>Commande #MAJRP1337 en cours | Statut : En livraison</h1>
+                        </div>
+                        <div class="etapes">
+                            <div class="etape active">
+                                <div class="cercle">1</div>
+                                <p class="description">Commande confirmée</p>
+                                <p class="date">18 Nov 2024</p>
+                            </div>
+                            <div class="etape active">
+                                <div class="cercle">2</div>
+                                <p class="description">Expédié</p>
+                                <p class="date">19 Nov 2024</p>
+                            </div>
+                            <div class="etape active">
+                                <div class="cercle">3</div>
+                                <p class="description">En livraison</p>
+                                <p class="date">20 Nov 2024</p>
+                            </div>
+                            <div class="etape">
+                                <div class="cercle">4</div>
+                                <p class="description">Livrée</p>
+                                <p class="date">21 Nov 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+        
+            </section>
         </div>
+
 	</body>
 </html>
