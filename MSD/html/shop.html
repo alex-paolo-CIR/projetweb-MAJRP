@@ -6,7 +6,9 @@
     <title>MSD - Boutique</title> 
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
-    <style>
+    
+
+<style>
         html, body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -58,7 +60,7 @@
 
         .item {
             text-align: center;
-            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+            background: linear-gradient(112.1deg, rgba(101, 111, 144, 0) 11.4%, rgba(69, 69, 69, 0) 70.2%);
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s;
@@ -85,7 +87,7 @@
         .item:hover {
             transform: scale(1.05);
         }
-
+        
         .modal {
             display: none;
             position: fixed;
@@ -147,6 +149,39 @@
             h1 {
                 font-size: 24px;
             }
+        }
+
+        /* Pour le premier élément */
+        .item:nth-child(1):hover img {
+            transition: ease-in-out 1ms;
+            content: url('../merch/vinyl1h.png');
+        }
+
+        /* Pour le deuxième élément */
+        .item:nth-child(2):hover img {
+            content: url('../merch/vinyl1h.png');
+        }
+
+        /* Pour le troisième élément */
+        .item:nth-child(3):hover img {
+            content: url('../merch/Teeshirt_noir_back.png');
+        }
+
+        /* Pour le quatrième élément */
+        .item:nth-child(4):hover img {
+            content: url('../merch/Teeshirt_b_back.png');
+        }
+        .item:nth-child(5):hover img {
+            content: url('../merch/Pull_noir_back.png');
+        }
+        .item:nth-child(6):hover img {
+            content: url('../merch/Pull_noir_back.png');
+        }
+        .item:nth-child(7):hover img {
+            content: url('../merch/poster1.jpg');
+        }
+        .item:nth-child(8):hover img {
+            content: url('../merch/poster2.jpg');
         }
     </style>
 </head>
@@ -238,7 +273,14 @@
             <img src="../merch/poster2.jpg" alt="Poster 2">
             <p>Poster 2</p>
         </div>
-
+        <div class="item">
+            <img src="../merch/cd1.jpg" alt="cd 1">
+            <p>cd 1</p>
+        </div>
+        <div class="item">
+            <img src="../merch/cd2.jpg" alt="cd 2">
+            <p>cd 2</p>
+        </div>
     </div>
 </div>
 

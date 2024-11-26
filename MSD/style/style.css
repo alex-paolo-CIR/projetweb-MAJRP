@@ -652,7 +652,7 @@ p {
   /* BUTTONS STYLE */
   .conteneur-connexion .button {
     flex-shrink: 0;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
     appearance: none;
     border: none;
     border-radius: 15px;
