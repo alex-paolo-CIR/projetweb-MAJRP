@@ -746,74 +746,40 @@ p {
     box-shadow: none;
     transform: translateY(0);
   }
-
-  /* tablette */
 @media only screen and (max-width: 768px) {
+
+    .overlay {
+        padding-top: 2vh;
+    }
     .conteneur-commande {
-        width: 90%; 
-        height: auto; 
+        width: 90%;
+        height: auto;
         padding: 15px;
     }
 
-    .titre-commande h1 {
+    .conteneur-commande h1 {
         font-size: 20px;
     }
 
+    .titre-commande h2 {
+        font-size: 15px;
+    }
+
     .etapes {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
     }
 
     .etape {
-        margin-bottom: 20px; 
+        margin-bottom: 15px;
     }
 
     .etape:not(:last-child)::after {
-         display: none; /* retire la barre jaune horizontale */
+        display: none;
     }
 
     .cercle {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 16px; 
-    }
-
-    .description {
-        font-size: 13px; 
-    }
-
-    .date {
-        font-size: 11px;
-    }
-}
-
-/* téléphone */
-@media only screen and (max-width: 600px) {
-    .conteneur-commande {
-        width: 100%; 
-        height: auto;
-        padding: 10px; 
-
-    }
-
-    .titre-commande h1 {
-        font-size: 18px; 
-        line-height: 1.2; 
-        margin-bottom: 20px;
-    }
-
-    .etapes {
-        flex-direction: column; 
-        gap: 15px;
-    }
-
-    .etape {
-        margin-bottom: 15px; 
-    }
-
-    .cercle {
-        width: 35px; 
+        width: 35px;
         height: 35px;
         line-height: 35px;
         font-size: 14px;
@@ -824,6 +790,79 @@ p {
     }
 
     .date {
-        font-size: 10px; 
+        font-size: 10px;
+    }
+
+    .informations-transporteur {
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .informations-transporteur h2 {
+        font-size: 14px;
+    }
+
+    .informations-transporteur p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .overlay {
+        padding-top: 2vh;
+    }
+    .conteneur-commande {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .conteneur-commande h1 {
+        font-size: 20px;
+    }
+
+    .titre-commande h2 {
+        font-size: 15px;
+    }
+
+
+    .etapes {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .etape {
+        margin-bottom: 10px;
+    }
+
+    .cercle {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 10px;
+    }
+
+    .date {
+        font-size: 9px;
+    }
+
+    .informations-transporteur {
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .informations-transporteur h2 {
+        font-size: 12px;
+    }
+
+    .informations-transporteur p {
+        font-size: 10px;
     }
 }
