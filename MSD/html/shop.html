@@ -100,7 +100,11 @@
         }
 
         .modal-content {
-            background-color: #fff;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.575);
+            backdrop-filter:  blur(5px);
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.300);
+            background-color: #000000;
             border-radius: 8px;
             max-width: 800px;
             width: 90%;
@@ -154,10 +158,10 @@
         }
 
         .modal-info h2 {
-            color: #333;
+            color: #575656;
             margin-bottom: 15px;
             font-size: 28px;
-            border-bottom: 2px solid #007bff;
+            border-bottom: 2px solid rgb(255, 238, 0);
             padding-bottom: 10px;
         }
 
@@ -169,28 +173,104 @@
 
         .modal-info .price {
             font-size: 24px;
-            color: #007bff;
+            color: rgb(255, 238, 0);
             font-weight: bold;
             margin-bottom: 20px;
         }
 
-        .modal-info .add-to-cart {
-            padding: 12px 24px;
-            background-color: #007bff;
-            color: white;
-            text-transform: uppercase;
-            font-weight: bold;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s;
-            align-self: flex-start;
-        }
+        
 
-        .modal-info .add-to-cart:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
+        
+    .add-to-cart {
+    padding: 15px 40px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+    
+    .add-to-cart::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    }
+
+    .add-to-cart::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FFF800,
+        #FF7300,
+        #ff0000,
+        #FF7300,
+        #FFF800,
+        #FF7300,
+        #ff0000,
+        #FFF800
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+    }
+    
+    @keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+    }
+
+    .add-to-cart:hover::before{
+        opacity: 1;
+    }
+
+    .add-to-cart:active:after{
+        background: transparent;
+    }
+    
+    .add-to-cart:active{
+        color:#000000;
+        font-weight : bold;
+    }
+
+    
+    /* Affichage de la vidéo */
+    .add-to-cart:active{
+        width: auto;
+        height: auto;
+        opacity: 1;
+        position: relative;
+        z-index: 1;
+        display: block;
+        border-radius: 4px;
+        max-width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    /* Animation pour cacher le bouton */
+    @keyframes hide-button {
+        to {
+            opacity: 0;
+            transform: scale(0.95);
         }
+    }
 
         @media (max-width: 600px) {
             .shop-grid {
