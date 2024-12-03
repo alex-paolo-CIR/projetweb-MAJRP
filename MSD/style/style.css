@@ -147,25 +147,7 @@ p {
 .lien:active {
     transform: scale(2);
 }
-/* tel */
-@media only screen and (max-width: 600px) {
-    .logo {
-        width: 256px;
-        transition: transform 0.5s ease;
-        cursor: pointer;
-    }
-    .conteneur-login {
-        width: 80vh;
-    }
-}
-/* tablette */
-@media only screen and (max-width: 768px) {
-    .logo {
-        width: 256px;
-        transition: transform 0.5s ease;
-        cursor: pointer;
-    }
-}
+
 
 .navbar {
     position: fixed;
@@ -746,7 +728,106 @@ p {
     box-shadow: none;
     transform: translateY(0);
   }
+
+/* tel */
+@media only screen and (max-width: 600px) {
+
+    .video-background {
+
+      }
+
+    .logo {
+        width: 256px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+    .conteneur-login {
+        width: 80vh;
+    }
+
+    
+    .overlay {
+        padding-top: 2vh;
+    }
+    .conteneur-commande {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .conteneur-commande h1 {
+        font-size: 20px;
+    }
+
+    .titre-commande h2 {
+        font-size: 15px;
+    }
+
+
+    .etapes {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .etape {
+        margin-bottom: 10px;
+    }
+
+    .cercle {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+    }
+
+    .description {
+        font-size: 10px;
+    }
+
+    .date {
+        font-size: 9px;
+    }
+
+    .informations-transporteur {
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .informations-transporteur h2 {
+        font-size: 12px;
+    }
+
+    .informations-transporteur p {
+        font-size: 10px;
+    }
+}
+
+
+/* tablette */
 @media only screen and (max-width: 768px) {
+    .logo {
+        width: 256px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+
+    
+    .navbar .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .navbar .dropdown .dropbtn img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar .conteneur-connexion img {
+        width: 35px;
+        height: 35px;
+    }
 
     .overlay {
         padding-top: 2vh;
@@ -805,64 +886,5 @@ p {
 
     .informations-transporteur p {
         font-size: 12px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .overlay {
-        padding-top: 2vh;
-    }
-    .conteneur-commande {
-        width: 90%;
-        height: auto;
-        padding: 15px;
-    }
-
-    .conteneur-commande h1 {
-        font-size: 20px;
-    }
-
-    .titre-commande h2 {
-        font-size: 15px;
-    }
-
-
-    .etapes {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .etape {
-        margin-bottom: 10px;
-    }
-
-    .cercle {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 12px;
-    }
-
-    .description {
-        font-size: 10px;
-    }
-
-    .date {
-        font-size: 9px;
-    }
-
-    .informations-transporteur {
-        width: 100%;
-        padding: 5px;
-        text-align: center;
-    }
-
-    .informations-transporteur h2 {
-        font-size: 12px;
-    }
-
-    .informations-transporteur p {
-        font-size: 10px;
     }
 }
