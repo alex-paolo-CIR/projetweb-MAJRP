@@ -100,7 +100,10 @@ header {
     transform: scale(1.1);
 }
 
+h2 {
+    font-size: 50px;
 
+}
 main {
     text-align: center;
     padding-top: 10%;
@@ -109,7 +112,7 @@ main {
 }
 
 p {
-    font-size: 40px;
+    font-size: 45px;
 }
 
 .logo {
@@ -147,25 +150,7 @@ p {
 .lien:active {
     transform: scale(2);
 }
-/* tel */
-@media only screen and (max-width: 600px) {
-    .logo {
-        width: 256px;
-        transition: transform 0.5s ease;
-        cursor: pointer;
-    }
-    .conteneur-login {
-        width: 80vh;
-    }
-}
-/* tablette */
-@media only screen and (max-width: 768px) {
-    .logo {
-        width: 256px;
-        transition: transform 0.5s ease;
-        cursor: pointer;
-    }
-}
+
 
 .navbar {
     position: fixed;
@@ -747,73 +732,136 @@ p {
     transform: translateY(0);
   }
 
-  /* tablette */
-@media only screen and (max-width: 768px) {
+/* tel */
+@media only screen and (max-width: 600px) {
+
+
+
+    .logo {
+        width: 256px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+    }
+    .conteneur-login {
+        width: 80vh;
+    }
+
+    
+    .overlay {
+        padding-top: 2vh;
+    }
     .conteneur-commande {
-        width: 90%; 
-        height: auto; 
+        width: 90%;
+        height: auto;
         padding: 15px;
     }
 
-    .titre-commande h1 {
+    .conteneur-commande h1 {
         font-size: 20px;
     }
 
+    .titre-commande h2 {
+        font-size: 15px;
+    }
+
+
     .etapes {
-        flex-direction: column; 
-        align-items: center; 
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .etape {
-        margin-bottom: 20px; 
-    }
-
-    .etape:not(:last-child)::after {
-         display: none; /* retire la barre jaune horizontale */
+        margin-bottom: 10px;
     }
 
     .cercle {
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 16px; 
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
     }
 
     .description {
-        font-size: 13px; 
+        font-size: 10px;
     }
 
     .date {
-        font-size: 11px;
+        font-size: 9px;
+    }
+
+    .informations-transporteur {
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .informations-transporteur h2 {
+        font-size: 12px;
+    }
+
+    .informations-transporteur p {
+        font-size: 10px;
     }
 }
 
-/* téléphone */
-@media only screen and (max-width: 600px) {
-    .conteneur-commande {
-        width: 100%; 
-        height: auto;
-        padding: 10px; 
 
+/* tablette */
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 256px;
+        transition: transform 0.5s ease;
+        cursor: pointer;
     }
 
-    .titre-commande h1 {
-        font-size: 18px; 
-        line-height: 1.2; 
-        margin-bottom: 20px;
+    
+    .navbar .logo img {
+        max-width: 120px;
+        height: auto;
+    }
+
+    .navbar .dropdown .dropbtn img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar .conteneur-connexion img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .overlay {
+        padding-top: 2vh;
+    }
+    .conteneur-commande {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .conteneur-commande h1 {
+        font-size: 20px;
+    }
+
+    .titre-commande h2 {
+        font-size: 15px;
     }
 
     .etapes {
-        flex-direction: column; 
-        gap: 15px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .etape {
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
+    }
+
+    .etape:not(:last-child)::after {
+        display: none;
     }
 
     .cercle {
-        width: 35px; 
+        width: 35px;
         height: 35px;
         line-height: 35px;
         font-size: 14px;
@@ -824,7 +872,21 @@ p {
     }
 
     .date {
-        font-size: 10px; 
+        font-size: 10px;
+    }
+
+    .informations-transporteur {
+        width: 100%;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .informations-transporteur h2 {
+        font-size: 14px;
+    }
+
+    .informations-transporteur p {
+        font-size: 12px;
     }
 }
 
