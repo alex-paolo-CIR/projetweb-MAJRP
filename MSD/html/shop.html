@@ -434,36 +434,87 @@
         .close-banner:hover {
             color: #cc0000;
         }
-        /* Style des boutons de taille */
-.size-selector {
+     /* Style des boutons de taille */
+    .size-selector {
     display: flex;
     gap: 10px;
     margin: 15px 0;
-}
+    }
 
 .size-option {
     display: inline-block;
-    border: 1px solid #ccc;
+    border: none;
+    color: white;
     background-color: white;
     padding: 10px 15px;
     font-size: 14px;
     text-align: center;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 12px;
+    position: relative;
+    z-index: 0;
     transition: all 0.3s ease;
     user-select: none;
 }
 
-.size-option:hover {
-    background-color: #c2c2c2;
+.size-option::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
 }
 
-/* Quand une option est sélectionnée */
-input[type="radio"]:checked + .size-option {
-    background-color: black;
-    color: white;
-    border-color: black;
+.size-option::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FFF800,
+        #FF7300,
+        #ff0000,
+        #FF7300,
+        #FFF800,
+        #FF7300,
+        #ff0000,
+        #FFF800
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
 }
+
+.size-option:hover::before {
+    opacity: 1;
+}
+
+/* Animation sur sélection */
+input[type="radio"]:checked + .size-option {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    animation: pop-in 0.4s ease-in-out, glowing-pulse 1s infinite;
+}
+
+input[type="radio"]:checked + .size-option::before {
+    opacity: 1;
+}
+
+input[type="radio"]:checked + .size-option::after {
+    background-color: transparent;
+}
+
     </style>
 </head>
 <body>
@@ -618,30 +669,30 @@ input[type="radio"]:checked + .size-option {
                     <p class="description">T-shirt noir élégant avec le logo MSD. Confortable et stylé, parfait pour tous les fans. Fabriqué en coton de haute qualité pour un look et un confort incomparables.</p>
                     <p class="price">24.99€</p>
                     <div class="size-selector">
-                        <input type="radio" id="size-xs" name="size" value="XS" hidden>
-                        <label for="size-xs" class="size-option">XS</label>
+                        <input type="radio" id="size-xs-3" name="size-3" value="XS" hidden>
+                        <label for="size-xs-3" class="size-option">XS</label>
     
-                        <input type="radio" id="size-s" name="size" value="S" hidden>
-                        <label for="size-s" class="size-option">S</label>
+                        <input type="radio" id="size-s-3" name="size-3" value="S" hidden>
+                        <label for="size-s-3" class="size-option">S</label>
     
-                        <input type="radio" id="size-m" name="size" value="M" hidden>
-                        <label for="size-m" class="size-option">M</label>
+                        <input type="radio" id="size-m-3" name="size-3" value="M" hidden>
+                        <label for="size-m-3" class="size-option">M</label>
     
-                        <input type="radio" id="size-l" name="size" value="L" hidden>
-                        <label for="size-l" class="size-option">L</label>
+                        <input type="radio" id="size-l-3" name="size-3" value="L" hidden>
+                        <label for="size-l-3" class="size-option">L</label>
     
-                        <input type="radio" id="size-xl" name="size" value="XL" hidden>
-                        <label for="size-xl" class="size-option">XL</label>
+                        <input type="radio" id="size-xl-3" name="size-3" value="XL" hidden>
+                        <label for="size-xl-3" class="size-option">XL</label>
     
-                        <input type="radio" id="size-xxl" name="size" value="XXL" hidden>
-                        <label for="size-xxl" class="size-option">XXL</label>
+                        <input type="radio" id="size-xxl-3" name="size-3" value="XXL" hidden>
+                        <label for="size-xxl-3" class="size-option">XXL</label>
                     </div>
-    
                     <button class="add-to-cart">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div id="modal4" class="modal">
         <div class="modal-content">
@@ -654,11 +705,31 @@ input[type="radio"]:checked + .size-option {
                     <h2>T-shirt Blanc MSD</h2>
                     <p class="description">T-shirt blanc épuré avec le logo MSD. Un style minimaliste et élégant qui s'adapte à toutes les occasions. Conçu pour le confort et la durabilité.</p>
                     <p class="price">24.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-4" name="size-4" value="XS" hidden>
+                        <label for="size-xs-4" class="size-option">XS</label>
+    
+                        <input type="radio" id="size-s-4" name="size-4" value="S" hidden>
+                        <label for="size-s-4" class="size-option">S</label>
+    
+                        <input type="radio" id="size-m-4" name="size-4" value="M" hidden>
+                        <label for="size-m-4" class="size-option">M</label>
+    
+                        <input type="radio" id="size-l-4" name="size-4" value="L" hidden>
+                        <label for="size-l-4" class="size-option">L</label>
+    
+                        <input type="radio" id="size-xl-4" name="size-4" value="XL" hidden>
+                        <label for="size-xl-4" class="size-option">XL</label>
+    
+                        <input type="radio" id="size-xxl-4" name="size-4" value="XXL" hidden>
+                        <label for="size-xxl-4" class="size-option">XXL</label>
+                    </div>
                     <button class="add-to-cart">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div id="modal5" class="modal">
         <div class="modal-content">
@@ -671,11 +742,31 @@ input[type="radio"]:checked + .size-option {
                     <h2>Pull Noir MSD</h2>
                     <p class="description">Pull noir sophistiqué avec le logo MSD. Parfait pour les journées fraîches, offrant chaleur et style. Matière douce et confortable pour un look premium.</p>
                     <p class="price">74.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-5" name="size-5" value="XS" hidden>
+                        <label for="size-xs-5" class="size-option">XS</label>
+    
+                        <input type="radio" id="size-s-5" name="size-5" value="S" hidden>
+                        <label for="size-s-5" class="size-option">S</label>
+    
+                        <input type="radio" id="size-m-5" name="size-5" value="M" hidden>
+                        <label for="size-m-5" class="size-option">M</label>
+    
+                        <input type="radio" id="size-l-5" name="size-5" value="L" hidden>
+                        <label for="size-l-5" class="size-option">L</label>
+    
+                        <input type="radio" id="size-xl-5" name="size-5" value="XL" hidden>
+                        <label for="size-xl-5" class="size-option">XL</label>
+    
+                        <input type="radio" id="size-xxl-5" name="size-5" value="XXL" hidden>
+                        <label for="size-xxl-5" class="size-option">XXL</label>
+                    </div>
                     <button class="add-to-cart">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div id="modal6" class="modal">
         <div class="modal-content">
@@ -688,11 +779,31 @@ input[type="radio"]:checked + .size-option {
                     <h2>Pull Gris MSD</h2>
                     <p class="description">Pull gris élégant qui apporte une touche de sophistication à votre look. Conçu avec des matériaux de haute qualité pour un confort optimal.</p>
                     <p class="price">74.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-6" name="size-6" value="XS" hidden>
+                        <label for="size-xs-6" class="size-option">XS</label>
+    
+                        <input type="radio" id="size-s-6" name="size-6" value="S" hidden>
+                        <label for="size-s-6" class="size-option">S</label>
+    
+                        <input type="radio" id="size-m-6" name="size-6" value="M" hidden>
+                        <label for="size-m-6" class="size-option">M</label>
+    
+                        <input type="radio" id="size-l-6" name="size-6" value="L" hidden>
+                        <label for="size-l-6" class="size-option">L</label>
+    
+                        <input type="radio" id="size-xl-6" name="size-6" value="XL" hidden>
+                        <label for="size-xl-6" class="size-option">XL</label>
+    
+                        <input type="radio" id="size-xxl-6" name="size-6" value="XXL" hidden>
+                        <label for="size-xxl-6" class="size-option">XXL</label>
+                    </div>
                     <button class="add-to-cart">Ajouter au panier</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div id="modal7" class="modal">
         <div class="modal-content">
