@@ -158,7 +158,7 @@
         }
 
         .modal-info h2 {
-            color: #575656;
+            color: #ffffff;
             margin-bottom: 15px;
             font-size: 28px;
             border-bottom: 2px solid rgb(255, 238, 0);
@@ -185,14 +185,15 @@
         padding: 15px 40px;
         border: none;
         outline: none;
-        color: #ffffff;
+        color: #000000;
         cursor: pointer;
         position: relative;
         z-index: 0;
         border-radius: 12px;
+        font-weight : bold;
     }
         
-        .add-to-cart::after {
+        .add-to-cart::before {
         content: "";
         z-index: -1;
         position: absolute;
@@ -204,7 +205,7 @@
         border-radius: 10px;
         }
 
-        .add-to-cart::before {
+        .add-to-cart::after {
         content: "";
         background: linear-gradient(
             45deg,
@@ -237,7 +238,7 @@
         100% { background-position: 0 0; }
         }
 
-        .add-to-cart:hover::before{
+        .add-to-cart:hover::after{
             opacity: 1;
         }
 
@@ -384,6 +385,13 @@
             transition: transform 1s ease-in-out;
             content: url('../merch/affiches-3.png');
         }
+        .item:nth-child(9):hover img {
+            content: url('../merch/cd_ouvert.png');
+        }
+        .item:nth-child(10):hover img {
+            content: url('../merch/cd_ouvert.png');
+        }
+
 
         .banner {
             position: fixed;
@@ -609,13 +617,13 @@ input[type="radio"]:checked + .size-option::after {
             </div>
             <div class="item">
                 <a href="#modal9">
-                    <img src="../merch/cd-ferme-petit.png" alt="cd 1">
-                    <p>CD 1</p>
+                    <img src="../merch/cd_ferme.png" alt="cd 1">
+                    <p>CD Msd "STAR" - 11.99€</p>
                 </a>
             </div>
             <div class="item">
                 <a href="#modal10">
-                    <img src="../merch/cd2.jpg" alt="cd 2">
+                    <img src="../merch/cd_ferme.png" alt="cd 2">
                     <p>CD 2</p>
                 </a>
             </div>
@@ -844,7 +852,7 @@ input[type="radio"]:checked + .size-option::after {
             <a href="#" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../merch/cd-ferme-petit.png" alt="CD 1">
+                    <img src="../merch/cd_ferme.png" alt="CD 1">
                 </div>
                 <div class="modal-info">
                     <h2>CD Msd "STAR" - 11.99€</h2>
