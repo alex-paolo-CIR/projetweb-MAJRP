@@ -103,8 +103,8 @@
             background-color: transparent;
             border: 2px solid rgba(255, 255, 255, 0.575);
             backdrop-filter:  blur(5px);
-            box-shadow: 0 0 50px rgba(255, 255, 255, 0.300);
-            background-color: #000000;
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+            background-color: #000000aa;
             border-radius: 8px;
             max-width: 800px;
             width: 90%;
@@ -119,7 +119,7 @@
 
         .close {
             position: absolute;
-            top: 10px;
+            top: 0px;
             right: 10px;
             font-size: 32px;
             color: #ff0000;
@@ -179,7 +179,7 @@
         }
 
         
-
+        /*bouton panier*/
         
         .add-to-cart {
         padding: 15px 40px;
@@ -190,6 +190,7 @@
         position: relative;
         z-index: 0;
         border-radius: 12px;
+<<<<<<< HEAD
     }
         
         .add-to-cart::after {
@@ -269,8 +270,68 @@
         to {
             opacity: 0;
             transform: scale(0.95);
+            font-weight : bold;
         }
-    }
+        
+        .add-to-cart::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+        }
+
+        .add-to-cart::before {
+        content: "";
+        background: linear-gradient(
+            45deg,
+            #FFF800,
+            #FF7300,
+            #ff0000,
+            #FF7300,
+            #FFF800,
+            #FF7300,
+            #ff0000,
+            #FFF800
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 600%;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+        opacity: 0;
+        }
+        
+        @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+        }
+
+        .add-to-cart:hover::before{
+            opacity: 1;
+        }
+
+        .add-to-cart:active:after{
+            background: transparent;
+        }
+        
+        .add-to-cart:active{
+            color:#000000;
+            font-weight : bold;
+        }
+
+    
 
         @media (max-width: 600px) {
             .shop-grid {
@@ -317,11 +378,12 @@
         }
 
         .item:nth-child(7):hover img {
-            content: url('../merch/poster1.jpg');
+            content: url('../merch/affiche-normall.png');
         }
 
         .item:nth-child(8):hover img {
-            content: url('../merch/poster2.jpg');
+            transition: transform 1s ease-in-out;
+            content: url('../merch/affiches-3.png');
         }
 
         .banner {
@@ -456,7 +518,7 @@ input[type="radio"]:checked + .size-option {
             <div class="item">
                 <a href="#modal2">
                     <img src="../merch/vinyl1.png" alt="Vinyl 2">
-                    <p>Vinyle 2</p>
+                    <p>ROCKSTAR Vinyle EDITION DELUXE - 39.99€</p>
                 </a>
             </div>
             <div class="item">
@@ -472,28 +534,40 @@ input[type="radio"]:checked + .size-option {
                 </a>
             </div>
             <div class="item">
-                <img src="../merch/Pull_noir_devant.png" alt="Pull 1">
-                <p>Pull Noir Msd - 74.99€</p>
+                <a href="#modal5">
+                    <img src="../merch/Pull_noir_devant.png" alt="Pull 1">
+                    <p>Pull Noir Msd - 74.99€</p>
+                </a>
             </div>
             <div class="item">
-                <img src="../merch/Pull_gris_devant.png" alt="Pull 2">
-                <p>Pull Gris Msd - 74.99€</p>
+                <a href="#modal6">
+                    <img src="../merch/Pull_gris_devant.png" alt="Pull 2">
+                    <p>Pull Gris Msd - 74.99€</p>
+                </a>
             </div>
             <div class="item">
-                <img src="../merch/poster1.jpg" alt="Poster 1">
-                <p>Poster 1</p>
+                <a href="#modal7">
+                    <img src="../merch/affiche-normall.png" alt="Poster 1">
+                    <p>Poster Msd - 7.99€</p>
+                </a>
             </div>
             <div class="item">
-                <img src="../merch/poster2.jpg" alt="Poster 2">
-                <p>Poster 2</p>
+                <a href="#modal8">
+                    <img src="../merch/affiche-normall.png" alt="Poster 2">
+                    <p>Pack de poster Msd x3 - 19.99€</p>
+                </a>
             </div>
             <div class="item">
-                <img src="../merch/cd1.jpg" alt="cd 1">
-                <p>CD 1</p>
+                <a href="#modal9">
+                    <img src="../merch/cd1.jpg" alt="cd 1">
+                    <p>CD 1</p>
+                </a>
             </div>
             <div class="item">
-                <img src="../merch/cd2.jpg" alt="cd 2">
-                <p>CD 2</p>
+                <a href="#modal10">
+                    <img src="../merch/cd2.jpg" alt="cd 2">
+                    <p>CD 2</p>
+                </a>
             </div>
         </div>
     </div>
@@ -524,9 +598,9 @@ input[type="radio"]:checked + .size-option {
                     <img src="../merch/vinyl1.png" alt="Vinyl 2">
                 </div>
                 <div class="modal-info">
-                    <h2>Vinyle 2</h2>
-                    <p class="description">Un second vinyle de la collection MSD. Découvrez une nouvelle expérience musicale avec ce vinyle soigneusement sélectionné.</p>
-                    <p class="price">Prix à déterminer</p>
+                    <h2>ROCKSTAR Vinyle EDITION DELUXE</h2>
+                    <p class="description">Explorez une expérience musicale unique avec le deuxième vinyle de la collection MSD. Conçu avec soin, ce disque d’exception inclut également trois titres exclusifs, réservés aux véritables passionnés.</p>
+                    <p class="price">39.99€</p>
                     <button class="add-to-cart">Ajouter au panier</button>
                 </div>
             </div>
@@ -626,11 +700,11 @@ input[type="radio"]:checked + .size-option {
             <a href="#" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../merch/poster1.jpg" alt="Poster 1">
+                    <img src="../merch/affiche-normall.png" alt="Poster 1">
                 </div>
                 <div class="modal-info">
                     <h2>Poster MSD 1</h2>
-                    <p class="description">Affiche collector MSD qui capture l'essence de notre univers musical. Un must-have pour les fans qui veulent décorer leur espace avec style.</p>
+                    <p class="description">Affiche collector MSD qui capture l'essence de notre univers musical. Un must-have pour les fans qui veulent décorer leur espace avec style. Pack contenant 3 posters</p>
                     <p class="price">19.99€</p>
                     <button class="add-to-cart">Ajouter au panier</button>
                 </div>
@@ -643,7 +717,7 @@ input[type="radio"]:checked + .size-option {
             <a href="#" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../merch/poster2.jpg" alt="Poster 2">
+                    <img src="../merch/affiches-3.png" alt="Poster 2">
                 </div>
                 <div class="modal-info">
                     <h2>Poster MSD 2</h2>
