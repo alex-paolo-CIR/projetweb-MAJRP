@@ -6,9 +6,7 @@
     <title>MSD - Boutique</title> 
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="../style/style.css">
-    
-
-<style>
+    <style>
         html, body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -60,11 +58,7 @@
 
         .item {
             text-align: center;
-<<<<<<< Updated upstream
-            background: linear-gradient(112.1deg, rgba(101, 111, 144, 0) 11.4%, rgba(69, 69, 69, 0) 70.2%);
-=======
-            background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgba(63, 76, 119, 0.122) 70.2%);
->>>>>>> Stashed changes
+            /* background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgba(63, 76, 119, 0.122) 70.2%); */
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s;
@@ -103,16 +97,20 @@
             justify-content: center;
             align-items: center;
             z-index: 999;
-
         }
 
         .modal-content {
-            background-color: #fff;
-            padding: 20px;
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.575);
+            backdrop-filter:  blur(5px);
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+            background-color: #000000aa;
             border-radius: 8px;
-            text-align: center;
-            max-width: 400px;
-            margin: 0 auto;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
         }
 
         .modal:target {
@@ -120,30 +118,219 @@
         }
 
         .close {
-            float: right;
-        padding: 4px 12px;
-        font-size: 32px;
-        color: white;
-        border: none;
-        cursor: pointer;
-        border-radius: 50%;
-        transition: background-color 0.3s ease;
-        touch-action: manipulation;
-        will-change: transform;
-        background-color: #ffffff;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            font-size: 32px;
+            color: #ff0000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-layout {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .modal-layout .agauche {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-layout .agauche img {
+            max-width: 300px;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-layout .modal-info {
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .modal-info h2 {
+            color: #575656;
+            margin-bottom: 15px;
+            font-size: 28px;
+            border-bottom: 2px solid rgb(255, 238, 0);
+            padding-bottom: 10px;
+        }
+
+        .modal-info .description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .modal-info .price {
+            font-size: 24px;
+            color: rgb(255, 238, 0);
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
         
-        .close:hover  {
-            touch-action: manipulation;
-            will-change: transform;
-            background-color: rgb(206, 206, 206);
+        /*bouton panier*/
+        
+        .add-to-cart {
+        padding: 15px 40px;
+        border: none;
+        outline: none;
+        color: #ffffff;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 12px;
+    }
+        
+        .add-to-cart::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
         }
 
-        .close a {
-            color: #fd0000;
-            text-decoration: none;
+        .add-to-cart::before {
+        content: "";
+        background: linear-gradient(
+            45deg,
+            #FFF800,
+            #FF7300,
+            #ff0000,
+            #FF7300,
+            #FFF800,
+            #FF7300,
+            #ff0000,
+            #FFF800
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 600%;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+        opacity: 0;
         }
+        
+        @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+        }
+
+        .add-to-cart:hover::before{
+            opacity: 1;
+        }
+
+        .add-to-cart:active:after{
+            background: transparent;
+        }
+        
+            .add-to-cart:active{
+                color:#000000;
+                font-weight : bold;
+            }
+
+        
+        /* Affichage de la vidéo */
+        .add-to-cart:active{
+            width: auto;
+            height: auto;
+            opacity: 1;
+            position: relative;
+            z-index: 1;
+            display: block;
+            border-radius: 4px;
+            max-width: 100%;
+            transition: all 0.3s ease;
+        }
+
+    /* Animation pour cacher le bouton */
+    @keyframes hide-button {
+        to {
+            opacity: 0;
+            transform: scale(0.95);
+            font-weight : bold;
+        }
+    }
+        
+.add-to-cart::after {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+        }
+
+        .add-to-cart::before {
+        content: "";
+        background: linear-gradient(
+            45deg,
+            #FFF800,
+            #FF7300,
+            #ff0000,
+            #FF7300,
+            #FFF800,
+            #FF7300,
+            #ff0000,
+            #FFF800
+        );
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        background-size: 600%;
+        z-index: -1;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        filter: blur(8px);
+        animation: glowing 20s linear infinite;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+        opacity: 0;
+        }
+        
+        @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+        }
+
+        .add-to-cart:hover::before{
+            opacity: 1;
+        }
+
+        .add-to-cart:active:after{
+            background: transparent;
+        }
+        
+        .add-to-cart:active{
+            color:#000000;
+            font-weight : bold;
+        }
+
+    
 
         @media (max-width: 600px) {
             .shop-grid {
@@ -153,39 +340,49 @@
             h1 {
                 font-size: 24px;
             }
+
+            .modal-layout {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .modal-layout .agauche img {
+                max-width: 250px;
+            }
         }
 
-        /* Pour le premier élément */
         .item:nth-child(1):hover img {
-            transition: ease-in-out 1ms;
             content: url('../merch/vinyl1h.png');
         }
 
-        /* Pour le deuxième élément */
         .item:nth-child(2):hover img {
             content: url('../merch/vinyl1h.png');
         }
 
-        /* Pour le troisième élément */
         .item:nth-child(3):hover img {
             content: url('../merch/Teeshirt_noir_back.png');
         }
 
-        /* Pour le quatrième élément */
         .item:nth-child(4):hover img {
             content: url('../merch/Teeshirt_b_back.png');
         }
+
         .item:nth-child(5):hover img {
             content: url('../merch/Pull_noir_back.png');
         }
+
         .item:nth-child(6):hover img {
             content: url('../merch/Pull_gris_back.png');
         }
+
         .item:nth-child(7):hover img {
-            content: url('../merch/poster1.jpg');
+            content: url('../merch/affiche-normall.png');
         }
+
         .item:nth-child(8):hover img {
-            content: url('../merch/poster2.jpg');
+            transition: transform 1s ease-in-out;
+            content: url('../merch/affiches-3.png');
         }
 
         .banner {
@@ -194,7 +391,6 @@
             left: 0;
             width: 100%;
             height: 4%;
-            
             background-color: #ff000036;
             color: white;
             padding: 15px;
@@ -207,20 +403,17 @@
 
         .banner p {
             margin: 0;
-            font-size:200%;
+            font-size: 200%;
         }
 
-        /* Cacher la bannière quand la case est cochée */
         #close-banner:checked + .banner {
             transform: translateY(100%);
         }
 
-        /* Cacher la case à cocher */
         #close-banner {
             display: none;
         }
 
-        /* Bouton fermer */
         .close-banner {
             position: absolute;
             top: 18%;
@@ -241,151 +434,449 @@
         .close-banner:hover {
             color: #cc0000;
         }
+     /* Style des boutons de taille */
+    .size-selector {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    }
+
+.size-option {
+    display: inline-block;
+    border: none;
+    color: white;
+    background-color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.size-option::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+.size-option::before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #FFF800,
+        #FF7300,
+        #ff0000,
+        #FF7300,
+        #FFF800,
+        #FF7300,
+        #ff0000,
+        #FFF800
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.size-option:hover::before {
+    opacity: 1;
+}
+
+/* Animation sur sélection */
+input[type="radio"]:checked + .size-option {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    animation: pop-in 0.4s ease-in-out, glowing-pulse 1s infinite;
+}
+
+input[type="radio"]:checked + .size-option::before {
+    opacity: 1;
+}
+
+input[type="radio"]:checked + .size-option::after {
+    background-color: transparent;
+}
+
     </style>
 </head>
 <body>
-    
-
-<nav class="navbar">
-    <div class="dropdown">
-        <button class="dropbtn"><img id="btnMenu" src="../images/icon-menu.png" alt="Menu"></button>
-        <div class="dropdown-content">
-            <a href="page.html">Accueil</a>
-            <a href="shop.html">Boutique</a>
-            <a href="plateforme.html">Plateforme</a>
-            <a href="renseignement.html">Renseignement</a>
+    <nav class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn"><img id="btnMenu" src="../images/icon-menu.png" alt="Menu"></button>
+            <div class="dropdown-content">
+                <a href="page.html">Accueil</a>
+                <a href="shop.html">Boutique</a>
+                <a href="plateforme.html">Plateforme</a>
+                <a href="renseignement.html">Renseignement</a>
+            </div>
         </div>
-    </div>
-    
-    <div class="logo">
-        <a href="../index.html" ><img src="../images/logo_msd.png" alt="Logo" /></a>
-    </div>
-    
-    <div class="conteneur-connexion">
-                        
-                        
-                          
-        <div>
-             <a href="connexion.html">
-                <img id="connexion" src="../images/icon-account.png"></a>
-            <button popovertarget="mobile-navigation" popovertargetaction="show" class="button" >
-                <img id="cart" src="../images/icon-cart.png">
-            </button >
-          
-            <nav popover id="mobile-navigation" >
-                
-              <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">×</button>
-              <span class="panier-label">PANIER</span>
-
-              <ul>
-                <li><a href="#">ARTICLE 1</a></li>
-                <li><a href="#">ARTICLE 2</a></li>
-                <li><a href="#">ARTICLE 3</a></li>
-                <li><a href="#" class="payment">PROCEDER AU PAIEMENT DE  247.95€</a></li>
-              </ul>
-            </nav>
-           
-        </div>
-    </div>
-</nav>
-
-<div class="conteneur-shop">
-    <div class="shop-grid">
-        <div class="item">
-            <a href="#modal1">
-                <img src="../merch/vinyl1.png" alt="Vinyl 1">
-                <p>ROCKSTAR Vinyle - 29.99€ </p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="#modal2">
-                <img src="../merch/vinyl1.png" alt="Vinyl 2">
-                <p>Vinyle 2</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="#modal3">
-                <img src="../merch/Teeshirt_noir_devant.png" alt="T-shirt 1">
-                <p>T-shirt Noir Msd - 24.99€</p>
-            </a>
-        </div>
-        <div class="item">
-            <a href="#modal4">
-            <img src="../merch/Teeshirt_b_devant.png" alt="T-shirt 2">
-            <p>T-shirt Blanc Msd - 24.99€</p>
-            </a>
-        </div>
-        <div class="item">
-            <img src="../merch/Pull_noir_devant.png" alt="Pull 1">
-            <p>Pull Noir Msd - 74.99€</p>
-        </div>
-        <div class="item">
-            <img src="../merch/Pull_gris_devant.png" alt ="Pull 2">
-            <p>Pull Gris Msd - 74.99€</p>
-        </div>
-        <div class="item">
-            <img src="../merch/poster1.jpg" alt="Poster 1">
-            <p>Poster 1</p>
-        </div>
-        <div class="item">
-            <img src="../merch/poster2.jpg" alt="Poster 2">
-            <p>Poster 2</p>
-        </div>
-        <div class="item">
-            <img src="../merch/cd1.jpg" alt="cd 1">
-            <p>cd 1</p>
-        </div>
-        <div class="item">
-            <img src="../merch/cd2.jpg" alt="cd 2">
-            <p>cd 2</p>
-        </div>
-    </div>
-</div>
-
-<!-- Modales -->
-<div id="modal1" class="modal">
-    <div class="modal-content">
-        <span class="close"><a href="#">×</a></span>
-        <h2>ROCKSTAR</h2>
-        <p>prout prout prout</p>
-    </div>
-</div>
-
-<div id="modal2" class="modal">
-    <div class="modal-content">
-        <span class="close"><a href="#">×</a></span>
-        <h2>Vinyl 2</h2>
-        <p>prout prout prout</p>
-    </div>
-</div>
-
-<div id="modal3" class="modal">
-    <div class="modal-content">
-        <span class="close"><a href="#">×</a></span>
-        <h2>T-shirt 1</h2>
-        <p>prout prout prout</p>
-    </div>
-</div>
-
-<div id="modal4" class="modal">
-    <div class="modal-content">
-        <span class="close"><a href="#">×</a></span>
-        <h2>T-shirt 2</h2>
-        <p>prout prout prout</p>
-
-    </div>
-</div>
-
-<!-- Case à cocher pour fermer la bannière -->
-<input type="checkbox" id="close-banner">
-
-<!-- Bannière -->
-<div class="banner">
-    <p>BLACK FRIDAY ! OFFRE JUSQU'A -50%</p>
-    <!-- span X pour fermer -->
-    <label for="close-banner" class="close-banner">X</label>
         
-</div>
+        <div class="logo">
+            <a href="../index.html"><img src="../images/logo_msd.png" alt="Logo" /></a>
+        </div>
+        
+        <div class="conteneur-connexion">
+            <div>
+                <a href="connexion.html">
+                    <img id="connexion" src="../images/icon-account.png" alt="Connexion">
+                </a>
+                <button popovertarget="mobile-navigation" popovertargetaction="show" class="button">
+                    <img id="cart" src="../images/icon-cart.png" alt="Panier">
+                </button>
+                
+                <nav popover id="mobile-navigation">
+                    <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">×</button>
+                    <span class="panier-label">PANIER</span>
 
+                    <ul>
+                        <li><a href="#">ARTICLE 1</a></li>
+                        <li><a href="#">ARTICLE 2</a></li>
+                        <li><a href="#">ARTICLE 3</a></li>
+                        <li><a href="#" class="payment">PROCEDER AU PAIEMENT DE 247.95€</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </nav>
+
+    <div class="conteneur-shop">
+        <div class="shop-grid">
+            <div class="item">
+                <a href="#modal1">
+                    <img src="../merch/vinyl1.png" alt="Vinyl 1">
+                    <p>ROCKSTAR Vinyle - 29.99€ </p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal2">
+                    <img src="../merch/vinyl1.png" alt="Vinyl 2">
+                    <p>ROCKSTAR Vinyle EDITION DELUXE - 39.99€</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal3">
+                    <img src="../merch/Teeshirt_noir_devant.png" alt="T-shirt 1">
+                    <p>T-shirt Noir Msd - 24.99€</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal4">
+                    <img src="../merch/Teeshirt_b_devant.png" alt="T-shirt 2">
+                    <p>T-shirt Blanc Msd - 24.99€</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal5">
+                    <img src="../merch/Pull_noir_devant.png" alt="Pull 1">
+                    <p>Pull Noir Msd - 74.99€</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal6">
+                    <img src="../merch/Pull_gris_devant.png" alt="Pull 2">
+                    <p>Pull Gris Msd - 74.99€</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal7">
+                    <img src="../merch/affiche-normall.png" alt="Poster 1">
+                    <p>Poster Msd - 7.99€</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal8">
+                    <img src="../merch/affiche-normall.png" alt="Poster 2">
+                    <p>Pack de poster Msd x3 - 19.99€</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal9">
+                    <img src="../merch/cd1.jpg" alt="cd 1">
+                    <p>CD 1</p>
+                </a>
+            </div>
+            <div class="item">
+                <a href="#modal10">
+                    <img src="../merch/cd2.jpg" alt="cd 2">
+                    <p>CD 2</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/vinyl1.png" alt="Vinyl 1">
+                </div>
+                <div class="modal-info">
+                    <h2>ROCKSTAR Vinyle</h2>
+                    <p class="description">Un vinyle exclusif pour les fans de ROCKSTAR. Édition limitée avec une qualité sonore exceptionnelle et un design unique qui capture l'essence de l'album.</p>
+                    <p class="price">29.99€</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/vinyl1.png" alt="Vinyl 2">
+                </div>
+                <div class="modal-info">
+                    <h2>ROCKSTAR Vinyle EDITION DELUXE</h2>
+                    <p class="description">Explorez une expérience musicale unique avec le deuxième vinyle de la collection MSD. Conçu avec soin, ce disque d’exception inclut également trois titres exclusifs, réservés aux véritables passionnés.</p>
+                    <p class="price">39.99€</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/Teeshirt_noir_devant.png" alt="T-shirt Noir">
+                </div>
+                <div class="modal-info">
+                    <h2>T-shirt Noir MSD</h2>
+                    <p class="description">T-shirt noir élégant avec le logo MSD. Confortable et stylé, parfait pour tous les fans. Fabriqué en coton de haute qualité pour un look et un confort incomparables.</p>
+                    <p class="price">24.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-3" name="size-3" value="XS" hidden>
+                        <label for="size-xs-3" class="size-option">XS</label>
+    
+                        <input type="radio" id="size-s-3" name="size-3" value="S" hidden>
+                        <label for="size-s-3" class="size-option">S</label>
+    
+                        <input type="radio" id="size-m-3" name="size-3" value="M" hidden>
+                        <label for="size-m-3" class="size-option">M</label>
+    
+                        <input type="radio" id="size-l-3" name="size-3" value="L" hidden>
+                        <label for="size-l-3" class="size-option">L</label>
+    
+                        <input type="radio" id="size-xl-3" name="size-3" value="XL" hidden>
+                        <label for="size-xl-3" class="size-option">XL</label>
+    
+                        <input type="radio" id="size-xxl-3" name="size-3" value="XXL" hidden>
+                        <label for="size-xxl-3" class="size-option">XXL</label>
+                    </div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/Teeshirt_b_devant.png" alt="T-shirt Blanc">
+                </div>
+                <div class="modal-info">
+                    <h2>T-shirt Blanc MSD</h2>
+                    <p class="description">T-shirt blanc épuré avec le logo MSD. Un style minimaliste et élégant qui s'adapte à toutes les occasions. Conçu pour le confort et la durabilité.</p>
+                    <p class="price">24.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-4" name="size-4" value="XS" hidden>
+                        <label for="size-xs-4" class="size-option">XS</label>
+    
+                        <input type="radio" id="size-s-4" name="size-4" value="S" hidden>
+                        <label for="size-s-4" class="size-option">S</label>
+    
+                        <input type="radio" id="size-m-4" name="size-4" value="M" hidden>
+                        <label for="size-m-4" class="size-option">M</label>
+    
+                        <input type="radio" id="size-l-4" name="size-4" value="L" hidden>
+                        <label for="size-l-4" class="size-option">L</label>
+    
+                        <input type="radio" id="size-xl-4" name="size-4" value="XL" hidden>
+                        <label for="size-xl-4" class="size-option">XL</label>
+    
+                        <input type="radio" id="size-xxl-4" name="size-4" value="XXL" hidden>
+                        <label for="size-xxl-4" class="size-option">XXL</label>
+                    </div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/Pull_noir_devant.png" alt="Pull Noir">
+                </div>
+                <div class="modal-info">
+                    <h2>Pull Noir MSD</h2>
+                    <p class="description">Pull noir sophistiqué avec le logo MSD. Parfait pour les journées fraîches, offrant chaleur et style. Matière douce et confortable pour un look premium.</p>
+                    <p class="price">74.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-5" name="size-5" value="XS" hidden>
+                        <label for="size-xs-5" class="size-option">XS</label>
+    
+                        <input type="radio" id="size-s-5" name="size-5" value="S" hidden>
+                        <label for="size-s-5" class="size-option">S</label>
+    
+                        <input type="radio" id="size-m-5" name="size-5" value="M" hidden>
+                        <label for="size-m-5" class="size-option">M</label>
+    
+                        <input type="radio" id="size-l-5" name="size-5" value="L" hidden>
+                        <label for="size-l-5" class="size-option">L</label>
+    
+                        <input type="radio" id="size-xl-5" name="size-5" value="XL" hidden>
+                        <label for="size-xl-5" class="size-option">XL</label>
+    
+                        <input type="radio" id="size-xxl-5" name="size-5" value="XXL" hidden>
+                        <label for="size-xxl-5" class="size-option">XXL</label>
+                    </div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/Pull_gris_devant.png" alt="Pull Gris">
+                </div>
+                <div class="modal-info">
+                    <h2>Pull Gris MSD</h2>
+                    <p class="description">Pull gris élégant qui apporte une touche de sophistication à votre look. Conçu avec des matériaux de haute qualité pour un confort optimal.</p>
+                    <p class="price">74.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-6" name="size-6" value="XS" hidden>
+                        <label for="size-xs-6" class="size-option">XS</label>
+    
+                        <input type="radio" id="size-s-6" name="size-6" value="S" hidden>
+                        <label for="size-s-6" class="size-option">S</label>
+    
+                        <input type="radio" id="size-m-6" name="size-6" value="M" hidden>
+                        <label for="size-m-6" class="size-option">M</label>
+    
+                        <input type="radio" id="size-l-6" name="size-6" value="L" hidden>
+                        <label for="size-l-6" class="size-option">L</label>
+    
+                        <input type="radio" id="size-xl-6" name="size-6" value="XL" hidden>
+                        <label for="size-xl-6" class="size-option">XL</label>
+    
+                        <input type="radio" id="size-xxl-6" name="size-6" value="XXL" hidden>
+                        <label for="size-xxl-6" class="size-option">XXL</label>
+                    </div>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/affiche-normall.png" alt="Poster 1">
+                </div>
+                <div class="modal-info">
+                    <h2>Poster MSD 1</h2>
+                    <p class="description">Affiche collector MSD qui capture l'essence de notre univers musical. Un must-have pour les fans qui veulent décorer leur espace avec style. Pack contenant 3 posters</p>
+                    <p class="price">19.99€</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/affiches-3.png" alt="Poster 2">
+                </div>
+                <div class="modal-info">
+                    <h2>Poster MSD 2</h2>
+                    <p class="description">Une seconde affiche collector qui complète parfaitement notre première série de posters. Un ajout impressionnant à toute collection de fans.</p>
+                    <p class="price">19.99€</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal9" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/cd1.jpg" alt="CD 1">
+                </div>
+                <div class="modal-info">
+                    <h2>CD 1</h2>
+                    <p class="description">CD original MSD avec une sélection de morceaux incontournables. Une qualité audio exceptionnelle pour revivre chaque moment musical.</p>
+                    <p class="price">14.99€</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal10" class="modal">
+        <div class="modal-content">
+            <a href="#" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../merch/cd2.jpg" alt="CD 2">
+                </div>
+                <div class="modal-info">
+                    <h2>CD 2</h2>
+                    <p class="description">Deuxième CD de la collection MSD. Une compilation unique qui offre une expérience musicale complète et immersive.</p>
+                    <p class="price">14.99€</p>
+                    <button class="add-to-cart">Ajouter au panier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="close-banner">
+    <div class="banner">
+        <p>BLACK FRIDAY ! OFFRE JUSQU'A -50%</p>
+        <label for="close-banner" class="close-banner">X</label>
+    </div>
 </body>
 </html>
