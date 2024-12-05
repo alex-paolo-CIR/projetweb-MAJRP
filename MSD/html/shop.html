@@ -369,55 +369,9 @@
         }
 
 
-        .banner {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4%;
-            background-color: #ff000036;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            font-size: 16px;
-            transition: transform 0.3s ease-in-out;
-        }
 
-        .banner p {
-            margin: 0;
-            font-size: 200%;
-        }
 
-        #close-banner:checked + .banner {
-            transform: translateY(100%);
-        }
-
-        #close-banner {
-            display: none;
-        }
-
-        .close-banner {
-            position: absolute;
-            top: 18%;
-            right: 28px;
-            transform: translateY(-50%);
-            background-color: #ff000000;
-            color: white;
-            border: none;
-            padding: 6px 14px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            outline: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-
-        .close-banner:hover {
-            color: #cc0000;
-        }
+        
      /* Style des boutons de taille */
     .size-selector {
     display: flex;
@@ -886,11 +840,87 @@ input[type="radio"]:checked + .size-option::after {
             </div>
         </div>
     </div>
-
     <input type="checkbox" id="close-banner">
-    <div class="banner">
-        <p>BLACK FRIDAY ! OFFRE JUSQU'A -50%</p>
-        <label for="close-banner" class="close-banner">X</label>
+<div class="banner">
+    <p>
+        Nous utilisons des cookies pour améliorer votre expérience sur notre site. En poursuivant votre navigation, vous acceptez notre utilisation des cookies.  
+        <a href="policy.html" style="color: #4144e7; text-decoration: underline;" target="_blank">En savoir plus</a>
+    </p>
+    <div class="cookie-buttons">
+        <label for="close-banner" class="cookie-btn">Accepter</label>
+        <label for="close-banner" class="cookie-btn">Refuser</label>
     </div>
+</div>
+
+    <style>
+
+
+
+
+
+
+
+.banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.banner a {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Texte de la bannière */
+.banner p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Boutons de la bannière */
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-btn {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.cookie-btn:hover {
+    background-color: #555;
+}
+
+/* Masquer la bannière */
+#close-banner:checked + .banner {
+    transform: translateY(100%);
+}
+
+#close-banner {
+    display: none;
+}
+    </style>
 </body>
 </html>
