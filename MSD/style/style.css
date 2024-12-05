@@ -431,7 +431,7 @@ p {
 }
 .titre-commande {
     text-align: center;
-    margin-bottom: 30px; /* Espacement avec les cercles */
+    /* margin-bottom: 30px; Espacement avec les cercles */
     color: white;
 }
 
@@ -743,7 +743,7 @@ p {
         cursor: pointer;
     }
     .conteneur-login {
-        width: 80vh;
+        width: 270px;
     }
 
     
@@ -754,6 +754,8 @@ p {
         width: 90%;
         height: auto;
         padding: 15px;
+        margin: 30px;
+        margin-top: 100px;
     }
 
     .conteneur-commande h1 {
@@ -768,7 +770,6 @@ p {
     .etapes {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
     }
 
     .etape {
