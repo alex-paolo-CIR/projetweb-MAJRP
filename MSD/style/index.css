@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    background-color: rgb(20, 20, 20);
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+}
+
+.video-webm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.conteneur-video {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position:relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    width: 100%; 
+    
+}
+
+.logo {
+    position: relative;
+    min-width: 300px;
+    max-width: 500px;
+    width: 50vw;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
