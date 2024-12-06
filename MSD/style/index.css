@@ -42,7 +42,7 @@ html, body {
 
 .logo {
     position: relative;
-    min-width: 300px;
+    min-width: 50px;
     max-width: 500px;
     width: 50vw;
     transition: transform 0.5s ease;
