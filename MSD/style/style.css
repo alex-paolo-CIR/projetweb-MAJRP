@@ -129,14 +129,13 @@ h2 {
 }
 main {
     text-align: center;
-    padding-top: 10%;
+
     color: white;
-    font-size: 50px;
+    font-size: 30px;
+    height: 100vh;;
 }
 
-p {
-    font-size: 45px;
-}
+
 
 .logo {
     width: 512px;
@@ -279,9 +278,9 @@ p {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 800px;
+    max-width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
