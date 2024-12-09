@@ -214,23 +214,25 @@ main {
     position: absolute;
     left: 0;
     top: 100%;
-    background-color: #ffd900;
+    background-color: #2e2e2e;
     min-width: 150px;
+    width: 200px;
     border-radius: 10px;
     border-style: solid;
     border-color: black;
 }
 
 .dropdown-content a {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     padding: 10px 15px;
     text-decoration: none;
     display: block;
+
 }
 
 .dropdown-content a:hover {
     border-radius: 10px;
-    background-color: #bca000;
+    background-color: #d1d1d1;
 }
 
 .dropdown:hover .dropdown-content {
