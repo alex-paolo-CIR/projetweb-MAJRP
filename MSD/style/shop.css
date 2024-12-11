@@ -2,7 +2,7 @@ html,body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('../images/fondtest.gif');
+    background-image: url('../media/fondtest.gif');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;

@@ -1,0 +1,129 @@
+@font-face {
+  font-family: Brigends;
+  src: url("../style/brigends.otf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: rgb(20, 20, 20);
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto; 
+  overflow-x: hidden; 
+}
+
+.video-webm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.fond {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.logo {
+  position: relative;
+  min-width: 50px;
+  max-width: 500px;
+  width: 50vw;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+
+/* ---------------------- test --------------------------- */
+
+
+.contenu {
+  height: 100vh; 
+  width: 100%;
+  background-color: rgb(30, 30, 30); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red; /* bordure tempo pour voir */
+}
+
+.msd {
+  color: white;
+  font-size: 10vh;
+  font-family: Brigends;
+  letter-spacing: 5px;
+
+}
+
+.bienvenue {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.infos{
+  margin: 50px;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 50px;
+  font-size: 2vh;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+
+}
+
+.infos:hover{
+  transform: scale(1.1);
+}
+
+/* ---------- responsive ---------- */
+/* pour ordi */
+@media only screen and (min-width: 600px) { 
+
+}
+
+/* pour tel */
+@media only screen and (max-width: 600px) { 
+  .bienvenue {
+    margin-top: 50%;
+  }
+
+}

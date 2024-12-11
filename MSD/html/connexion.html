@@ -3,108 +3,91 @@
 	<head> 
         <meta name="viewport" content="width=device.width, initial-scale=1.0">
 		<meta charset="utf-8">
-		<title>MSD</title> 
-		<link rel="icon" type="image/x-icon" href="../images/favicon.ico">
-		<link rel="stylesheet" type="text/css" href ="../style/style.css">
+		<title>MSD - Connexion</title> 
+		<link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+        <link rel="stylesheet" type="text/css" href ="../style/main.css">
+		<link rel="stylesheet" type="text/css" href ="../style/navbar.css">
+        <link rel="stylesheet" type="text/css" href ="../style/connexion.css">
         
 	</head>
 		
 	<body>
 
         <header>    
-
                 <nav class="navbar">
-                    <div class="dropdown">
-                        <button class="dropbtn"><img id="btnMenu" src="../images/icon-menu.png" alt=""></button>
-                        <div class="dropdown-content">
-                            <a href="page.html">Accueil</a>
-                            <a href="shop.html">Boutique</a>
-                            <a href="plateforme.html">Platforme</a>
-                            <a href="renseignement.html">Renseignement</a>
-                        </div>
+
+                    <div class="utils">
+                        <a href="connexion.html"><img id="connexion" class="icones" src="../media/icon-account.png"></a>
                     </div>
             
                     <div class="logo">
-                        <a href="../index.html" ><img src="../images/logo_msd.png" alt="Logo" /></a>
-                    
+                        <a href="../index.html" ><img src="../media/logo_msd.png" alt="Logo" /></a>                    
+                    </div>
+
+                    <div class="utils">
+                        <a href="#"><img id="panier"  class="icones" src="../media/icon-cart.png"></a>
+                    </div>
+
+                    <!-- <div class="utils-tel">
+                        <a href="connexion.html"><img id="connexion" class="icones" src="../media/icon-account.png"></a>
+                        <a href="#"><img id="panier"  class="icones" src="../media/icon-cart.png"></a>
+
+                        <div class="navbar-menu-tel">
+                            <a href="#">ACCUEIL</a>
+                            <a href="#">BOUTIQUE</a>
+                            <a href="#">CONTACT</a>
+                        </div>
+                    </div> -->
+                    <div class="navbar-menu-tel">
+                        <a href="#">ACCUEIL</a>
+                        <a href="#">BOUTIQUE</a>
+                        <a href="#">CONTACT</a>
                     </div>
                     
-                    <div class="conteneur-connexion">
-                        
-                        <a href="connexion.html"><img id="connexion" src="../images/icon-account.png"></a>
-                        
-                        <button popovertarget="mobile-navigation" popovertargetaction="show" class="button" >
-                            <img id="cart" src="../images/icon-cart.png">
-                        </button >
-                    
-                        <nav popover id="mobile-navigation">
-                        
-                            <button popovertarget="mobile-navigation" popovertargetaction="hide" class="button close-button">×</button>
-                            <span class="panier-label">PANIER</span>
-
-                            <ul>
-                                <li><a href="#">ARTICLE 1</a></li>
-                                <li><a href="#">ARTICLE 2</a></li>
-                                <li><a href="#">ARTICLE 3</a></li>
-                                <li><a href="#" class="payment">PROCEDER AU PAIEMENT DE  247.95€</a></li>
-                            </ul>
-                        </nav>
-                    
-                        
-                        
+                    <div class="navbar-menu">
+                        <a href="#">ACCUEIL</a>
+                        <a href="#">BOUTIQUE</a>
+                        <a href="#">CONTACT</a>
                     </div>
                 </nav>
-   
+
+
         </header>
-		<div class="page-login">
 
-            
-
-            <section class="video-background">
-                <video autoplay loop muted playsinline class="background-video">
-                    <source src="../images/fond.webm" type="video/webm">
-                    Votre navigateur ne supporte pas les vidéos HTML5.
-                </video>
-                <div class="overlay">
-                
-            
-            
-                
+        <section class="fond">
+            <video autoplay loop muted playsinline class="video-webm">
+              <source src="../media/fond.webm" type="video/webm" />
+              Votre navigateur ne supporte pas les vidéos HTML5.
+            </video>
+      
+            <div class="overlay">
                 <div class="conteneur-login">
                     <form action="track.html" method="get">
+
                         <h1>Connexion</h1>
+
                         <div class="input-box">
                             <input type="text" placeholder="Nom d'utilisateur" required>
-                            <img id="user" src="../images/icon-account.png">
+                            <img id="user" src="../media/icon-account.png">
                         </div>
+
                         <div class="input-box">
                             <input type="password" placeholder="Mot de passe" required>
-                            <img id="pwd" src="../images/icon-lock.png">
+                            <img id="pwd" src="../media/icon-lock.png">
                         </div>
 
                         <button type="submit" class="btn">Se connecter</button>
 
                         <div class="inscription">
                             <p>Vous n'avez pas de compte ? <a href="#">S'inscrire</a></p>
-
                         </div>
-
-                        
-
-
-
                     </form>
                 </div>
-
-
             </div>
-
-           
-
-            
-            <footer></footer>
         </section>
-        </div>
 
+        <footer>
+
+        </footer>
 	</body>
 </html>

@@ -33,7 +33,7 @@ footer {
     grid-area: site-footer;
 } */
 /* .background {
-    background-image: url("../images/fond.webm");
+    background-image: url("../media/fond.webm");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -93,7 +93,7 @@ footer {
 }
 
 .glitch {
-    background-image: url("../images/fondtest.gif");
+    background-image: url("../media/fondtest.gif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
