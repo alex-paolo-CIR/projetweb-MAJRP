@@ -28,7 +28,7 @@ body {
   min-width: 100%;
   min-height: 100%;
   width: auto;
-  height: auto;
+  height: 100%;
   transform: translate(-50%, -50%);
   z-index: 0;
 }
@@ -127,3 +127,5 @@ body {
   }
 
 }
+
+

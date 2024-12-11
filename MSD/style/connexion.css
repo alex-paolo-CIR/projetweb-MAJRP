@@ -88,12 +88,15 @@
     display: none; 
 }
 
-
+.navbar {
+    justify-content: center; /* permet de regler un probleme de centrage*/ 
+}
 
 /* ---------- responsive ---------- */
 /* pour ordi */
 @media only screen and (min-width: 600px) { 
 
+    
 }
 
 /* pour tel */
