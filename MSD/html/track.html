@@ -5,101 +5,99 @@
 		<meta charset="utf-8">
 		<title>MSD</title> 
 		<link rel="icon" type="image/x-icon" href="../media/favicon.ico">
-		<link rel="stylesheet" type="text/css" href ="../style/style.css">
+        <link rel="stylesheet" type="text/css" href ="../style/main.css">
+		<link rel="stylesheet" type="text/css" href ="../style/navbar.css">
+        <link rel="stylesheet" type="text/css" href ="../style/track.css">
         
 	</head>
 		
 	<body>
 
         <header>    
+            <nav class="navbar">
 
-                <nav class="navbar">
-                    <div class="dropdown">
-                        <button class="dropbtn"><img id="btnMenu" src="../media/icon-menu.png" alt=""></button>
-                        <div class="dropdown-content">
-                            <a href="page.html">Accueil</a>
-                            <a href="shop.html">Boutique</a>
-                            <a href="plateforme.html">Platforme</a>
-                            <a href="renseignement.html">Renseignement</a>
-                        </div>
-                    </div>
-            
-                    <div class="logo">
-                        <a href="../index.html" ><img src="../media/logo_msd.png" alt="Logo" /></a>
-                    
-                    </div>
-                    
-                    <div class="conteneur-connexion">
-                        
-                        <a href="connexion.html"><img id="connexion" src="../media/sillycat.jpg"></a>
-                        
-                        
-                        </nav>
-                    
-                        
-                        
-                    </div>
-                </nav>
-   
-        </header>
-		<div class="page-commande">
-
-            
-
-            <section class="video-background">
-                <video autoplay loop muted playsinline class="background-video">
-                    <source src="../media/fond.webm" type="video/webm">
-                    Votre navigateur ne supporte pas les vidéos HTML5.
-                </video>
-                <div class="overlay">
-            
-                
-                    <div class="conteneur-commande">
-                        <h1>Suivi des commandes</h1>
-                        <div class="titre-commande">
-                            <h2>Commande #MAJRP1337 en cours | Statut : En livraison</h2>
-                        </div>
-                        <div class="etapes">
-                            <div class="etape active">
-                                <div class="cercle">1</div>
-                                <p class="description">Commande confirmée</p>
-                                <p class="date">18 Nov 2024</p>
-                            </div>
-                            <div class="etape active">
-                                <div class="cercle">2</div>
-                                <p class="description">Expédié</p>
-                                <p class="date">19 Nov 2024</p>
-                            </div>
-                            <div class="etape active">
-                                <div class="cercle">3</div>
-                                <p class="description">En livraison</p>
-                                <p class="date">20 Nov 2024</p>
-                            </div>
-                            <div class="etape">
-                                <div class="cercle">4</div>
-                                <p class="description">Livrée</p>
-                                <p class="date">...</p>
-                            </div>
-
-
-                            
-
-                        </div>
-
-                        <div class="informations-transporteur">
-                            <h2>TRANSPORTEUR : COLISSIMO</h2>
-                            <p>Numéro de colis : <span>8A564Z78DFG</span></p>
-                            <p>Date de livraison estimée : <span>23 Nov 2024</span></p>
-                        </div>
-
-                    </div>
-
-
+                <div class="utils">
+                    <a href="connexion.html"><img id="connexion" class="icones" src="../media/icon-account.png"></a>
                 </div>
-
         
-            </section>
-        </div>
+                <div class="logo">
+                    <a href="../index.html" ><img src="../media/logo_msd.png" alt="Logo" /></a>                    
+                </div>
+        
+                <div class="utils">
+                    <a href="#"><img id="panier"  class="icones" src="../media/icon-cart.png"></a>
+                </div>
+        
+                <div class="utils-tel">
+                    <a href="connexion.html"><img id="connexion" class="icones" src="../media/icon-account.png"></a>
+                    <a href="#"><img id="panier"  class="icones" src="../media/icon-cart.png"></a>
+        
+                    <div class="navbar-menu-tel">
+                        <a href="#">ACCUEIL</a>
+                        <a href="#">BOUTIQUE</a>
+                        <a href="#">CONTACT</a>
+                    </div>
+                </div>
+        
+                <div class="navbar-menu">
+                    <a href="#">ACCUEIL</a>
+                    <a href="#">BOUTIQUE</a>
+                    <a href="#">CONTACT</a>
+                </div>
+            </nav>
 
+        </header>
+
+        <section class="fond">
+            <video autoplay loop muted playsinline class="video-webm">
+              <source src="../media/fond.webm" type="video/webm" />
+              Votre navigateur ne supporte pas les vidéos HTML5.
+            </video>
+      
+            <div class="overlay">
+                <div class="conteneur-commande">
+                    <h1>Suivi des commandes</h1>
+                    <div class="titre-commande">
+                        <h2>Commande #MAJRP1337 en cours | Statut : En livraison</h2>
+                    </div>
+                    <div class="etapes">
+                        <div class="etape active">
+                            <div class="cercle">1</div>
+                            <p class="description">Confirmée</p>
+                            <p class="date">18 Nov 2024</p>
+                        </div>
+                        <div class="etape active">
+                            <div class="cercle">2</div>
+                            <p class="description">Expédié</p>
+                            <p class="date">19 Nov 2024</p>
+                        </div>
+                        <div class="etape active">
+                            <div class="cercle">3</div>
+                            <p class="description">En livraison</p>
+                            <p class="date">20 Nov 2024</p>
+                        </div>
+                        <div class="etape">
+                            <div class="cercle">4</div>
+                            <p class="description">Livrée</p>
+                            <p class="date">...</p>
+                        </div>
+
+
+                        
+
+                    </div>
+
+                    <div class="informations-transporteur">
+                        <h2>TRANSPORTEUR : COLISSIMO</h2>
+                        <p>Numéro de colis : <span>8A564Z78DFG</span></p>
+                        <p>Date de livraison estimée : <span>23 Nov 2024</span></p>
+                    </div>
+
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
 	</body>
 </html>
