@@ -88,11 +88,7 @@
     display: none; 
 }
 
-.navbar {
-    justify-content: center; /* permet de regler un probleme de centrage*/ 
-    position: relative;
-    background-color: black;
-}
+
 
 /* ---------- responsive ---------- */
 /* pour ordi */
@@ -109,6 +105,11 @@
         padding: 20px 20px 20px 20px;
     }
 
+    .navbar {
+        justify-content: center; /* permet de regler un probleme de centrage*/ 
+        position: relative;
+        background-color: black;
+    }
 
 
 }
@@ -119,5 +120,11 @@
         top: 30vh;
         width: 60vh;
         padding: 20px 20px 20px 20px;
+    }
+
+    .navbar {
+        justify-content: center; /* permet de regler un probleme de centrage*/ 
+        position: relative;
+        background-color: black;
     }
 }
