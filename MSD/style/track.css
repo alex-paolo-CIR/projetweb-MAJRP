@@ -1,20 +1,14 @@
 
 .conteneur-commande {
-    display: flex;
-    flex-direction: column; /* Positionnement vertical */
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    height: 80vh;
-
-    margin:  50%;
-    padding: 20px;
-
+    position: absolute;
+    width: 80%;
+    max-width:600px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.575);
-    backdrop-filter: blur(5px);
-    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+    backdrop-filter:  blur(5px);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.300);
     border-radius: 10px;
+    padding: 30px 40px;
 }
 
 
@@ -138,11 +132,7 @@
 }
 
 /* pour tel */
-@media only screen and (max-width: 600px) { 
-
-    .fond {
-        height: 150%;  /* permet de scroll et voir le contenu */
-    }
+@media only screen and (max-width: 700px) { 
     .conteneur-commande {
         position: relative;
         width: 90%;
