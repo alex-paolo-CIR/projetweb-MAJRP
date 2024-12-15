@@ -8,17 +8,17 @@
   background-color: transparent;
   z-index: 1000;
   padding: 10px 20px;
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
+
 
   display: grid;
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes pour les éléments */
-  grid-template-rows: 1fr 1fr; /* Trois lignes */
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
   grid-template-areas:
     "utils-co logo utils-ca"
     "navbar-menu navbar-menu navbar-menu";
   align-items: center;
-  justify-items: center; /* Centre les éléments horizontalement */
+  justify-items: center; 
 }
 
 .navbar .logo {
@@ -72,7 +72,6 @@
   left: 0;
   padding: 10px 20px;
   z-index: 999; /* s'assure qu'il est au-dessus du fond */
-  /* border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
   grid-area: navbar-menu;
 }
 

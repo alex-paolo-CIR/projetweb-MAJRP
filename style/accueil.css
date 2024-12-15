@@ -7,14 +7,9 @@
   background-color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
-  /* border: 1px solid rgb(117, 117, 117); bordure tempo pour voir */
   border-radius: 10px;
   padding: 10px;
   margin: auto;
-}
-
-/* correction a ajouter */
-.contenu {
   overflow: hidden; /* evite les débordements */
   display: flex;
   flex-direction: column;
@@ -68,7 +63,6 @@
   align-items: center;
 }
 
-/* correction a rajouter */
 .conteneur-bio {
   position: relative;
   justify-content: center;
