@@ -11,7 +11,7 @@
     
     opacity: 0;
     transform: translateX(100%);
-    background-color: transparent; /* Fond transparent par défaut */
+    background-color: transparent; 
 }
 
 #cart:popover-open {
@@ -40,7 +40,8 @@
 
 .item-details p {
     margin: 5px 0;
-}
+    font-size: 18px; 
+}   
 
 .checkout {
     margin-top: 20px;
@@ -101,15 +102,5 @@
     transform: translateY(0);
 }
 
-
-.item-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.item-details p {
-    margin: 5px 0;
-    font-size: 18px; /* Augmenter la taille du texte */
-}   
 
 
