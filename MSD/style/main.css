@@ -27,8 +27,6 @@ body {
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  /* width: auto;
-  height: 100%; */
   transform: translate(-50%, -50%);
   z-index: 0;
 }
@@ -62,6 +60,46 @@ body {
 
 .logo:hover {
   transform: scale(1.1);
+}
+
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ff0000;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icon {
+  margin: 0 10px;
 }
 
 /* ---------- responsive ---------- */
