@@ -9,19 +9,20 @@
     <link rel="stylesheet" type="text/css" href="../style/main.css">
     <link rel="stylesheet" type="text/css" href="../style/navbar.css">
     <link rel="stylesheet" type="text/css" href="../style/shop.css">
-
 </head>
 
 <body>
-
-
     <nav class="navbar">
         <div class="utils-co">
-            <a href="connexion.html"><img id="connexion" class="icones" src="../media/icon-account.png" alt="icon-account"></a>
+            <a href="connexion.html">
+                <img id="connexion" class="icones" src="../media/icon-account.png" alt="icon-account">
+            </a>
         </div>
 
         <div class="logo">
-            <a href="../index.html"><img src="../media/logo_msd.png" alt="Logo"></a>
+            <a href="../index.html">
+                <img src="../media/logo_msd.png" alt="Logo">
+            </a>
         </div>
 
         <div class="utils-ca">
@@ -75,92 +76,94 @@
         </div>
     </nav>
 
-
-
-
-
-
     <div class="conteneur-shop">
         <div class="shop-grid">
             <div class="item" id="item1">
                 <a href="#modal1">
-                    <img src="../media/merch/vinyl1.png" alt="Vinyl 1">
-                    <p>ROCKSTAR Vinyle - 29.99€ </p>
-                </a>
-            </div>
-            <div class="item" id="item2">
-                <a href="#modal2">
-                    <img src="../media/merch/vinyl1.png" alt="Vinyl 2">
-                    <p>ROCKSTAR Vinyle EDITION DELUXE - 39.99€</p>
-                </a>
-            </div>
-            <div class="item" id="item3">
-                <a href="#modal3">
                     <img src="../media/merch/Teeshirt_noir_devant.png" alt="T-shirt 1">
                     <p>T-shirt Noir Msd - 24.99€</p>
                 </a>
             </div>
-            <div class="item" id="item4">
-                <a href="#modal4">
+            <div class="item" id="item2">
+                <a href="#modal2">
                     <img src="../media/merch/Teeshirt_b_devant.png" alt="T-shirt 2">
                     <p>T-shirt Blanc Msd - 24.99€</p>
                 </a>
             </div>
-            <div class="item" id="item5">
-                <a href="#modal5">
+            <div class="item" id="item3">
+                <a href="#modal3">
                     <img src="../media/merch/Pull_noir_devant.png" alt="Pull 1">
                     <p>Pull Noir Msd - 74.99€</p>
                 </a>
             </div>
-            <div class="item" id="item6">
-                <a href="#modal6">
+            <div class="item" id="item4">
+                <a href="#modal4">
                     <img src="../media/merch/Pull_gris_devant.png" alt="Pull 2">
                     <p>Pull Gris Msd - 74.99€</p>
                 </a>
             </div>
-            <div class="item" id="item7">
-                <a href="#modal7">
+            <div class="item" id="item5">
+                <a href="#modal5">
                     <img src="../media/merch/affiche-normall.png" alt="Poster 1">
                     <p>Poster Msd - 7.99€</p>
                 </a>
             </div>
-            <div class="item" id="item8">
-                <a href="#modal8">
+            <div class="item" id="item6">
+                <a href="#modal6">
                     <img src="../media/merch/affiche-normall.png" alt="Poster 2">
                     <p>Pack de poster Msd x3 - 19.99€</p>
                 </a>
             </div>
-            <div class="item" id="item9">
-                <a href="#modal9">
+            <div class="item" id="item7">
+                <a href="#modal7">
                     <img src="../media/merch/cd_ferme.png" alt="cd 1">
                     <p>CD Msd "STAR" - 11.99€</p>
                 </a>
             </div>
-            <div class="item" id="item10">
-                <a href="#modal10">
-                    <img src="../media/merch/cd_ferme.png" alt="cd 2">
-                    <p>CD 2</p>
+            <div class="item" id="item8">
+                <a href="#modal8">
+                    <img src="../media/merch/vinyl1.png" alt="Vinyl">
+                    <p>ROCKSTAR Vinyle - 29.99€ </p>
                 </a>
             </div>
         </div>
     </div>
 
     <!-- Modals -->
+
     <div id="modal1" class="modal">
         <div class="modal-content">
             <a href="#item1" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../media/merch/vinyl1.png" alt="Vinyl 1">
+                    <img src="../media/merch/Teeshirt_noir_devant.png" alt="T-shirt Noir">
                 </div>
                 <div class="modal-info">
-                    <h2>ROCKSTAR Vinyle</h2>
-                    <p class="description">Un vinyle exclusif pour les fans de ROCKSTAR. Édition limitée avec une
-                        qualité sonore exceptionnelle et un design unique qui capture l'essence de l'album.</p>
-                    <p class="price">29.99€</p>
+                    <h2>T-shirt Noir MSD</h2>
+                    <p class="description">T-shirt noir élégant avec le logo MSD. Confortable et stylé, parfait pour tous les fans. Fabriqué en coton de haute qualité pour un look et un confort incomparables.</p>
+                    <p class="price">24.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-1" name="size-1" value="XS" hidden>
+                        <label for="size-xs-1" class="size-option">XS</label>
+
+                        <input type="radio" id="size-s-1" name="size-1" value="S" hidden>
+                        <label for="size-s-1" class="size-option">S</label>
+
+                        <input type="radio" id="size-m-1" name="size-1" value="M" hidden>
+                        <label for="size-m-1" class="size-option">M</label>
+
+                        <input type="radio" id="size-l-1" name="size-1" value="L" hidden>
+                        <label for="size-l-1" class="size-option">L</label>
+
+                        <input type="radio" id="size-xl-1" name="size-1" value="XL" hidden>
+                        <label for="size-xl-1" class="size-option">XL</label>
+
+                        <input type="radio" id="size-xxl-1" name="size-1" value="XXL" hidden>
+                        <label for="size-xxl-1" class="size-option">XXL</label>
+                    </div>
                     <button class="add-to-cart">
                         <span class="button-text">Ajouter au panier</span>
-                        <img class="check-icon" src="../media/icon-check.png" alt="icon-check">
+                        <img class="check-icon" src="../media/icon-check.png" alt="Check">
                     </button>
                 </div>
             </div>
@@ -172,17 +175,34 @@
             <a href="#item2" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../media/merch/vinyl1.png" alt="Vinyl 2">
+                    <img src="../media/merch/Teeshirt_b_devant.png" alt="T-shirt Blanc">
                 </div>
                 <div class="modal-info">
-                    <h2>ROCKSTAR Vinyle EDITION DELUXE</h2>
-                    <p class="description">Explorez une expérience musicale unique avec le deuxième vinyle de la
-                        collection MSD. Conçu avec soin, ce disque d’exception inclut également trois titres exclusifs,
-                        réservés aux véritables passionnés.</p>
-                    <p class="price">39.99€</p>
+                    <h2>T-shirt Blanc MSD</h2>
+                    <p class="description">T-shirt blanc classique avec le logo MSD. Idéal pour compléter votre garde-robe et afficher votre passion avec style. Coton 100% premium pour un confort assuré.</p>
+                    <p class="price">24.99€</p>
+                    <div class="size-selector">
+                        <input type="radio" id="size-xs-2" name="size-2" value="XS" hidden>
+                        <label for="size-xs-2" class="size-option">XS</label>
+
+                        <input type="radio" id="size-s-2" name="size-2" value="S" hidden>
+                        <label for="size-s-2" class="size-option">S</label>
+
+                        <input type="radio" id="size-m-2" name="size-2" value="M" hidden>
+                        <label for="size-m-2" class="size-option">M</label>
+
+                        <input type="radio" id="size-l-2" name="size-2" value="L" hidden>
+                        <label for="size-l-2" class="size-option">L</label>
+
+                        <input type="radio" id="size-xl-2" name="size-2" value="XL" hidden>
+                        <label for="size-xl-2" class="size-option">XL</label>
+
+                        <input type="radio" id="size-xxl-2" name="size-2" value="XXL" hidden>
+                        <label for="size-xxl-2" class="size-option">XXL</label>
+                    </div>
                     <button class="add-to-cart">
                         <span class="button-text">Ajouter au panier</span>
-                        <img class="check-icon" src="../media/icon-check.png" alt="icon-check">
+                        <img class="check-icon" src="../media/icon-check.png" alt="Check">
                     </button>
                 </div>
             </div>
@@ -194,13 +214,12 @@
             <a href="#item3" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../media/merch/Teeshirt_noir_devant.png" alt="T-shirt Noir">
+                    <img src="../media/merch/Pull_noir_devant.png" alt="Pull Noir">
                 </div>
                 <div class="modal-info">
-                    <h2>T-shirt Noir MSD</h2>
-                    <p class="description">T-shirt noir élégant avec le logo MSD. Confortable et stylé, parfait pour
-                        tous les fans. Fabriqué en coton de haute qualité pour un look et un confort incomparables.</p>
-                    <p class="price">24.99€</p>
+                    <h2>Pull Noir MSD</h2>
+                    <p class="description">Pull noir en coton doux avec un design exclusif MSD. Parfait pour rester au chaud avec style tout en soutenant votre groupe favori.</p>
+                    <p class="price">74.99€</p>
                     <div class="size-selector">
                         <input type="radio" id="size-xs-3" name="size-3" value="XS" hidden>
                         <label for="size-xs-3" class="size-option">XS</label>
@@ -229,19 +248,17 @@
         </div>
     </div>
 
-
     <div id="modal4" class="modal">
         <div class="modal-content">
             <a href="#item4" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../media/merch/Teeshirt_b_devant.png" alt="T-shirt Blanc">
+                    <img src="../media/merch/Pull_gris_devant.png" alt="Pull Gris">
                 </div>
                 <div class="modal-info">
-                    <h2>T-shirt Blanc MSD</h2>
-                    <p class="description">T-shirt blanc épuré avec le logo MSD. Un style minimaliste et élégant qui
-                        s'adapte à toutes les occasions. Conçu pour le confort et la durabilité.</p>
-                    <p class="price">24.99€</p>
+                    <h2>Pull Gris MSD</h2>
+                    <p class="description">Pull gris confortable et chic avec une finition impeccable. Arborez fièrement le logo MSD tout en profitant de la qualité premium.</p>
+                    <p class="price">74.99€</p>
                     <div class="size-selector">
                         <input type="radio" id="size-xs-4" name="size-4" value="XS" hidden>
                         <label for="size-xs-4" class="size-option">XS</label>
@@ -270,38 +287,17 @@
         </div>
     </div>
 
-
     <div id="modal5" class="modal">
         <div class="modal-content">
             <a href="#item5" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../media/merch/Pull_noir_devant.png" alt="Pull Noir">
+                    <img src="../media/merch/affiche-normall.png" alt="Poster Msd">
                 </div>
                 <div class="modal-info">
-                    <h2>Pull Noir MSD</h2>
-                    <p class="description">Pull noir sophistiqué avec le logo MSD. Parfait pour les journées fraîches,
-                        offrant chaleur et style. Matière douce et confortable pour un look premium.</p>
-                    <p class="price">74.99€</p>
-                    <div class="size-selector">
-                        <input type="radio" id="size-xs-5" name="size-5" value="XS" hidden>
-                        <label for="size-xs-5" class="size-option">XS</label>
-
-                        <input type="radio" id="size-s-5" name="size-5" value="S" hidden>
-                        <label for="size-s-5" class="size-option">S</label>
-
-                        <input type="radio" id="size-m-5" name="size-5" value="M" hidden>
-                        <label for="size-m-5" class="size-option">M</label>
-
-                        <input type="radio" id="size-l-5" name="size-5" value="L" hidden>
-                        <label for="size-l-5" class="size-option">L</label>
-
-                        <input type="radio" id="size-xl-5" name="size-5" value="XL" hidden>
-                        <label for="size-xl-5" class="size-option">XL</label>
-
-                        <input type="radio" id="size-xxl-5" name="size-5" value="XXL" hidden>
-                        <label for="size-xxl-5" class="size-option">XXL</label>
-                    </div>
+                    <h2>Poster MSD</h2>
+                    <p class="description">Poster simple et élégant à l'image de MSD. Ajoutez une touche musicale à votre décoration intérieure.</p>
+                    <p class="price">7.99€</p>
                     <button class="add-to-cart">
                         <span class="button-text">Ajouter au panier</span>
                         <img class="check-icon" src="../media/icon-check.png" alt="Check">
@@ -310,94 +306,9 @@
             </div>
         </div>
     </div>
-
-
-    <div id="modal6" class="modal">
-        <div class="modal-content">
-            <a href="#item6" class="close">×</a>
-            <div class="modal-layout">
-                <div class="agauche">
-                    <img src="../media/merch/Pull_gris_devant.png" alt="Pull Gris">
-                </div>
-                <div class="modal-info">
-                    <h2>Pull Gris MSD</h2>
-                    <p class="description">Pull gris élégant qui apporte une touche de sophistication à votre look.
-                        Conçu avec des matériaux de haute qualité pour un confort optimal.</p>
-                    <p class="price">74.99€</p>
-                    <div class="size-selector">
-                        <input type="radio" id="size-xs-6" name="size-6" value="XS" hidden>
-                        <label for="size-xs-6" class="size-option">XS</label>
-
-                        <input type="radio" id="size-s-6" name="size-6" value="S" hidden>
-                        <label for="size-s-6" class="size-option">S</label>
-
-                        <input type="radio" id="size-m-6" name="size-6" value="M" hidden>
-                        <label for="size-m-6" class="size-option">M</label>
-
-                        <input type="radio" id="size-l-6" name="size-6" value="L" hidden>
-                        <label for="size-l-6" class="size-option">L</label>
-
-                        <input type="radio" id="size-xl-6" name="size-6" value="XL" hidden>
-                        <label for="size-xl-6" class="size-option">XL</label>
-
-                        <input type="radio" id="size-xxl-6" name="size-6" value="XXL" hidden>
-                        <label for="size-xxl-6" class="size-option">XXL</label>
-                    </div>
-                    <button class="add-to-cart">
-                        <span class="button-text">Ajouter au panier</span>
-                        <img class="check-icon" src="../media/icon-check.png" alt="Check">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div id="modal7" class="modal">
         <div class="modal-content">
             <a href="#item7" class="close">×</a>
-            <div class="modal-layout">
-                <div class="agauche">
-                    <img src="../media/merch/affiche-normall.png" alt="Poster 1">
-                </div>
-                <div class="modal-info">
-                    <h2>Poster MSD 1</h2>
-                    <p class="description">Affiche collector MSD qui capture l'essence de notre univers musical. Un
-                        must-have pour les fans qui veulent décorer leur espace avec style. Pack contenant 3 posters</p>
-                    <p class="price">19.99€</p>
-                    <button class="add-to-cart">
-                        <span class="button-text">Ajouter au panier</span>
-                        <img class="check-icon" src="../media/icon-check.png" alt="Check">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal8" class="modal">
-        <div class="modal-content">
-            <a href="#item8" class="close">×</a>
-            <div class="modal-layout">
-                <div class="agauche">
-                    <img src="../media/merch/affiches-3.png" alt="Poster 2">
-                </div>
-                <div class="modal-info">
-                    <h2>Poster MSD 2</h2>
-                    <p class="description">Une seconde affiche collector qui complète parfaitement notre première série
-                        de posters. Un ajout impressionnant à toute collection de fans.</p>
-                    <p class="price">19.99€</p>
-                    <button class="add-to-cart">
-                        <span class="button-text">Ajouter au panier</span>
-                        <img class="check-icon" src="../media/icon-check.png" alt="Check">
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal9" class="modal">
-        <div class="modal-content">
-            <a href="#item9" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/cd_ferme.png" alt="CD 1">
@@ -415,19 +326,19 @@
             </div>
         </div>
     </div>
-
-    <div id="modal10" class="modal">
+    
+    <div id="modal8" class="modal">
         <div class="modal-content">
-            <a href="#item10" class="close">×</a>
+            <a href="#item8" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../media/merch/cd2.jpg" alt="CD 2">
+                    <img src="../media/merch/vinyl1.png" alt="Vinyl 1">
                 </div>
                 <div class="modal-info">
-                    <h2>CD 2</h2>
-                    <p class="description">Deuxième CD de la collection MSD. Une compilation unique qui offre une
-                        expérience musicale complète et immersive.</p>
-                    <p class="price">14.99€</p>
+                    <h2>ROCKSTAR Vinyle</h2>
+                    <p class="description">Un vinyle exclusif pour les fans de ROCKSTAR. Édition limitée avec une
+                        qualité sonore exceptionnelle et un design unique qui capture l'essence de l'album.</p>
+                    <p class="price">29.99€</p>
                     <button class="add-to-cart">
                         <span class="button-text">Ajouter au panier</span>
                         <img class="check-icon" src="../media/icon-check.png" alt="Check">
@@ -436,10 +347,10 @@
             </div>
         </div>
     </div>
-
+    
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 MSD. TOUT DROITS RESERVES.</p>
+            <p>&copy; 2024 MSD. TOUS DROITS RÉSERVÉS.</p>
             <div class="socials">
                 <a href="https://soundcloud.com/msdmsd" class="social-icon">SoundCloud</a>
                 <a href="https://www.youtube.com/@Msd-Prime" class="social-icon">YouTube</a>
@@ -447,7 +358,5 @@
             </div>
         </div>
     </footer>
-
 </body>
-
 </html>
