@@ -26,11 +26,11 @@
 
         <div class="utils-ca">
             <button popovertarget="cart" popovertargetaction="show" class="button">
-              <img id="panier" class="icones" src="../media/icon-cart.png" alt="Panier">
-          </button>
-          </div>
+                <img id="panier" class="icones" src="../media/icon-cart.png" alt="Panier">
+            </button>
+        </div>
 
-          <nav popover id="cart">
+        <nav popover id="cart">
             <button popovertarget="cart" popovertargetaction="hide" class="button close-button">×</button>
             <div class="cart-item">
                 <img src="../media/merch/vinyl1.png" alt="Vinyl 2">
@@ -82,64 +82,116 @@
 
     <div class="conteneur-shop">
         <div class="shop-grid">
-                        
             <div class="item" id="item1">
                 <a href="#modal1">
-                    <img src="../media/merch/Teeshirt_noir_devant.png" alt="T-shirt 1">
-                    <p>T-shirt Noir Msd - 24.99€</p>
+                    <img src="../media/merch/vinyl1.png" alt="Vinyl 1">
+                    <p>ROCKSTAR Vinyle - 29.99€ </p>
                 </a>
             </div>
             <div class="item" id="item2">
                 <a href="#modal2">
-                    <img src="../media/merch/Teeshirt_b_devant.png" alt="T-shirt 2">
-                    <p>T-shirt Blanc Msd - 24.99€</p>
+                    <img src="../media/merch/vinyl1.png" alt="Vinyl 2">
+                    <p>ROCKSTAR Vinyle EDITION DELUXE - 39.99€</p>
                 </a>
             </div>
             <div class="item" id="item3">
                 <a href="#modal3">
-                    <img src="../media/merch/Pull_noir_devant.png" alt="Pull 1">
-                    <p>Pull Noir Msd - 74.99€</p>
+                    <img src="../media/merch/Teeshirt_noir_devant.png" alt="T-shirt 1">
+                    <p>T-shirt Noir Msd - 24.99€</p>
                 </a>
             </div>
             <div class="item" id="item4">
                 <a href="#modal4">
-                    <img src="../media/merch/Pull_gris_devant.png" alt="Pull 2">
-                    <p>Pull Gris Msd - 74.99€</p>
+                    <img src="../media/merch/Teeshirt_b_devant.png" alt="T-shirt 2">
+                    <p>T-shirt Blanc Msd - 24.99€</p>
                 </a>
             </div>
             <div class="item" id="item5">
                 <a href="#modal5">
-                    <img src="../media/merch/affiche-normall.png" alt="Poster 1">
-                    <p>Poster Msd - 7.99€</p>
+                    <img src="../media/merch/Pull_noir_devant.png" alt="Pull 1">
+                    <p>Pull Noir Msd - 74.99€</p>
                 </a>
             </div>
             <div class="item" id="item6">
                 <a href="#modal6">
-                    <img src="../media/merch/affiche-normall.png" alt="Poster 2">
-                    <p>Pack de poster Msd x3 - 19.99€</p>
+                    <img src="../media/merch/Pull_gris_devant.png" alt="Pull 2">
+                    <p>Pull Gris Msd - 74.99€</p>
                 </a>
             </div>
             <div class="item" id="item7">
                 <a href="#modal7">
+                    <img src="../media/merch/affiche-normall.png" alt="Poster 1">
+                    <p>Poster Msd - 7.99€</p>
+                </a>
+            </div>
+            <div class="item" id="item8">
+                <a href="#modal8">
+                    <img src="../media/merch/affiche-normall.png" alt="Poster 2">
+                    <p>Pack de poster Msd x3 - 19.99€</p>
+                </a>
+            </div>
+            <div class="item" id="item9">
+                <a href="#modal9">
                     <img src="../media/merch/cd_ferme.png" alt="cd 1">
                     <p>CD Msd "STAR" - 11.99€</p>
                 </a>
             </div>
-	    <div class="item" id="item8">
-                <a href="#modal8">
-                    <img src="../media/merch/vinyl1.png" alt="Vinyl">
-                    <p>ROCKSTAR Vinyle - 29.99€ </p>
+            <div class="item" id="item10">
+                <a href="#modal10">
+                    <img src="../media/merch/cd_ferme.png" alt="cd 2">
+                    <p>CD 2</p>
                 </a>
             </div>
         </div>
     </div>
 
     <!-- Modals -->
-    
-
     <div id="modal1" class="modal">
         <div class="modal-content">
             <a href="#item1" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../media/merch/vinyl1.png" alt="Vinyl 1">
+                </div>
+                <div class="modal-info">
+                    <h2>ROCKSTAR Vinyle</h2>
+                    <p class="description">Un vinyle exclusif pour les fans de ROCKSTAR. Édition limitée avec une
+                        qualité sonore exceptionnelle et un design unique qui capture l'essence de l'album.</p>
+                    <p class="price">29.99€</p>
+                    <button class="add-to-cart">
+                        <span class="button-text">Ajouter au panier</span>
+                        <img class="check-icon" src="../media/icon-check.png" alt="Check" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <a href="#item2" class="close">×</a>
+            <div class="modal-layout">
+                <div class="agauche">
+                    <img src="../media/merch/vinyl1.png" alt="Vinyl 2">
+                </div>
+                <div class="modal-info">
+                    <h2>ROCKSTAR Vinyle EDITION DELUXE</h2>
+                    <p class="description">Explorez une expérience musicale unique avec le deuxième vinyle de la
+                        collection MSD. Conçu avec soin, ce disque d’exception inclut également trois titres exclusifs,
+                        réservés aux véritables passionnés.</p>
+                    <p class="price">39.99€</p>
+                    <button class="add-to-cart">
+                        <span class="button-text">Ajouter au panier</span>
+                        <img class="check-icon" src="../media/icon-check.png" alt="Check" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <a href="#item3" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/Teeshirt_noir_devant.png" alt="T-shirt Noir">
@@ -178,9 +230,9 @@
     </div>
 
 
-    <div id="modal2" class="modal">
+    <div id="modal4" class="modal">
         <div class="modal-content">
-            <a href="#item2" class="close">×</a>
+            <a href="#item4" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/Teeshirt_b_devant.png" alt="T-shirt Blanc">
@@ -219,9 +271,9 @@
     </div>
 
 
-    <div id="modal3" class="modal">
+    <div id="modal5" class="modal">
         <div class="modal-content">
-            <a href="#item3" class="close">×</a>
+            <a href="#item5" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/Pull_noir_devant.png" alt="Pull Noir">
@@ -260,9 +312,9 @@
     </div>
 
 
-    <div id="modal4" class="modal">
+    <div id="modal6" class="modal">
         <div class="modal-content">
-            <a href="#item4" class="close">×</a>
+            <a href="#item6" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/Pull_gris_devant.png" alt="Pull Gris">
@@ -301,9 +353,9 @@
     </div>
 
 
-    <div id="modal5" class="modal">
+    <div id="modal7" class="modal">
         <div class="modal-content">
-            <a href="#item5" class="close">×</a>
+            <a href="#item7" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/affiche-normall.png" alt="Poster 1">
@@ -322,9 +374,9 @@
         </div>
     </div>
 
-    <div id="modal6" class="modal">
+    <div id="modal8" class="modal">
         <div class="modal-content">
-            <a href="#item6" class="close">×</a>
+            <a href="#item8" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/affiches-3.png" alt="Poster 2">
@@ -343,9 +395,9 @@
         </div>
     </div>
 
-    <div id="modal7" class="modal">
+    <div id="modal9" class="modal">
         <div class="modal-content">
-            <a href="#item7" class="close">×</a>
+            <a href="#item9" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
                     <img src="../media/merch/cd_ferme.png" alt="CD 1">
@@ -363,19 +415,19 @@
             </div>
         </div>
     </div>
-    
-<div id="modal8" class="modal">
+
+    <div id="modal10" class="modal">
         <div class="modal-content">
-            <a href="#item8" class="close">×</a>
+            <a href="#item10" class="close">×</a>
             <div class="modal-layout">
                 <div class="agauche">
-                    <img src="../media/merch/vinyl1.png" alt="Vinyl 1">
+                    <img src="../media/merch/cd2.jpg" alt="CD 2">
                 </div>
                 <div class="modal-info">
-                    <h2>ROCKSTAR Vinyle</h2>
-                    <p class="description">Un vinyle exclusif pour les fans de ROCKSTAR. Édition limitée avec une
-                        qualité sonore exceptionnelle et un design unique qui capture l'essence de l'album.</p>
-                    <p class="price">29.99€</p>
+                    <h2>CD 2</h2>
+                    <p class="description">Deuxième CD de la collection MSD. Une compilation unique qui offre une
+                        expérience musicale complète et immersive.</p>
+                    <p class="price">14.99€</p>
                     <button class="add-to-cart">
                         <span class="button-text">Ajouter au panier</span>
                         <img class="check-icon" src="../media/icon-check.png" alt="Check" />
@@ -384,7 +436,6 @@
             </div>
         </div>
     </div>
-</div>
 
     </div>
 
@@ -392,9 +443,9 @@
         <div class="footer-content">
             <p>&copy; 2024 MSD. TOUT DROITS RESERVES.</p>
             <div class="socials">
-                <a href="#" class="social-icon">SoundCloud</a>
-                <a href="#" class="social-icon">YouTube</a>
-                <a href="#" class="social-icon">Instagram</a>
+                <a href="https://soundcloud.com/msdmsd" class="social-icon">SoundCloud</a>
+                <a href="https://www.youtube.com/@Msd-Prime" class="social-icon">YouTube</a>
+                <a href="https://www.instagram.com/msdprod_/?next=%2Fmars.620%2F" class="social-icon">Instagram</a>
             </div>
         </div>
     </footer>
